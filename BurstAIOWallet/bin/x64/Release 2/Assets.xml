@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <asset>
+    <assetID>2264511436216725766</assetID>
+    <assetName>Lex4All</assetName>
+    <assetQTY>5000000</assetQTY>
+  </asset>
+  <asset>
+    <assetID>15266167261394017138</assetID>
+    <assetName>casino</assetName>
+    <assetQTY>1000000</assetQTY>
+  </asset>
+  <asset>
+    <assetID>6503640249706792397</assetID>
+    <assetName>UniBURST</assetName>
+    <assetQTY>1000000</assetQTY>
+  </asset>
+  <asset>
+    <assetID>942954888627932030</assetID>
+    <assetName>FleX</assetName>
+    <assetQTY>1000000</assetQTY>
+  </asset>
+</NewDataSet>

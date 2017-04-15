@@ -1,0 +1,94 @@
+2017-03-13 00:08:39 INFO: nxt.enableStackTraces = "true"
+2017-03-13 00:08:39 INFO: nxt.enableLogTraceback = "false"
+2017-03-13 00:08:39 INFO: logging enabled
+2017-03-13 00:08:39 INFO: nxt.disableGenerateBlocksThread not defined, assuming false
+2017-03-13 00:08:40 INFO: nxt.dbCacheKB = "0"
+2017-03-13 00:08:40 INFO: nxt.maxRollback = "1440"
+2017-03-13 00:08:40 INFO: nxt.isTestnet = "false"
+2017-03-13 00:08:40 INFO: nxt.isOffline = "false"
+2017-03-13 00:08:40 INFO: nxt.dbUrl = "jdbc:h2:./burst_db/burst;DB_CLOSE_ON_EXIT=FALSE"
+2017-03-13 00:08:41 INFO: nxt.maxDbConnections = "30"
+2017-03-13 00:08:41 INFO: nxt.dbLoginTimeout = "70"
+2017-03-13 00:08:41 INFO: nxt.dbDefaultLockTimeout = "60"
+2017-03-13 00:08:42 INFO: nxt.enableTransactionRebroadcasting = "true"
+2017-03-13 00:08:42 INFO: nxt.testUnconfirmedTransactions not defined, assuming false
+2017-03-13 00:08:42 INFO: burst.rebroadcastAfter = "4"
+2017-03-13 00:08:42 INFO: burst.rebroadcastAfter = "4"
+2017-03-13 00:08:42 INFO: burst.rebroadcastEvery = "2"
+2017-03-13 00:08:42 INFO: burst.rebroadcastEvery = "2"
+2017-03-13 00:08:42 INFO: burst.blockCacheMB not defined, assuming 0
+2017-03-13 00:08:42 INFO: burst.oclVerify = "false"
+2017-03-13 00:08:42 INFO: burst.oclThreshold not defined, assuming 0
+2017-03-13 00:08:42 INFO: burst.oclWaitThreshold not defined, assuming 0
+2017-03-13 00:08:42 INFO: nxt.trimDerivedTables = "true"
+2017-03-13 00:08:42 INFO: nxt.forceScan = "false"
+2017-03-13 00:08:42 INFO: nxt.forceValidate = "false"
+2017-03-13 00:08:42 INFO: nxt.disableGetMoreBlocksThread not defined, assuming false
+2017-03-13 00:08:42 INFO: nxt.disableImportBlocksThread not defined, assuming false
+2017-03-13 00:08:42 INFO: nxt.disableProcessTransactionsThread not defined, assuming false
+2017-03-13 00:08:42 INFO: nxt.disableRemoveUnconfirmedTransactionsThread not defined, assuming false
+2017-03-13 00:08:42 INFO: nxt.disableRebroadcastTransactionsThread not defined, assuming false
+2017-03-13 00:08:42 INFO: Initializing an empty database
+2017-03-13 00:08:42 INFO: Deleting blockchain...
+2017-03-13 00:08:43 INFO: nxt.myPlatform = "PC"
+2017-03-13 00:08:43 INFO: nxt.myAddress not defined
+2017-03-13 00:08:43 INFO: nxt.peerServerPort = "8123"
+2017-03-13 00:08:43 INFO: nxt.shareMyAddress = "true"
+2017-03-13 00:08:43 INFO: nxt.myHallmark not defined
+2017-03-13 00:08:43 INFO: burst.rebroadcastPeers = "burst.ninja; pool.burstcoin.biz"
+2017-03-13 00:08:43 INFO: nxt.wellKnownPeers = "burstcoin.shmtech.biz:9682; 128.171.156.20:8123; 5.9.44.154; cybaer.dyndns.org;  wallet.burstcoin.tech:8121; 91.235.113.249; a.storj.eu"
+2017-03-13 00:08:43 INFO: burst.connectWellKnownFirst = "2"
+2017-03-13 00:08:43 INFO: nxt.knownBlacklistedPeers not defined
+2017-03-13 00:08:43 INFO: nxt.maxNumberOfConnectedPublicPeers = "20"
+2017-03-13 00:08:43 INFO: nxt.connectTimeout = "4000"
+2017-03-13 00:08:43 INFO: nxt.readTimeout = "8000"
+2017-03-13 00:08:43 INFO: nxt.enableHallmarkProtection = "false"
+2017-03-13 00:08:43 INFO: nxt.pushThreshold = "0"
+2017-03-13 00:08:43 INFO: nxt.pullThreshold = "0"
+2017-03-13 00:08:43 INFO: nxt.blacklistingPeriod = "600000"
+2017-03-13 00:08:43 INFO: nxt.communicationLoggingMask = "0"
+2017-03-13 00:08:43 INFO: nxt.sendToPeersLimit = "10"
+2017-03-13 00:08:43 INFO: nxt.usePeersDb = "true"
+2017-03-13 00:08:43 INFO: nxt.savePeers = "true"
+2017-03-13 00:08:43 INFO: nxt.getMorePeers = "true"
+2017-03-13 00:08:43 INFO: nxt.dumpPeersVersion not defined
+2017-03-13 00:08:43 INFO: nxt.disablePeerConnectingThread not defined, assuming false
+2017-03-13 00:08:43 INFO: nxt.disablePeerUnBlacklistingThread not defined, assuming false
+2017-03-13 00:08:43 INFO: nxt.disableGetMorePeersThread not defined, assuming false
+2017-03-13 00:08:43 INFO: nxt.peerServerHost = "0.0.0.0"
+2017-03-13 00:08:43 INFO: nxt.peerServerIdleTimeout = "30000"
+2017-03-13 00:08:43 INFO: nxt.enablePeerServerGZIPFilter = "true"
+2017-03-13 00:08:43 INFO: nxt.enablePeerServerDoSFilter = "true"
+2017-03-13 00:08:43 INFO: nxt.peerServerDoSFilter.maxRequestsPerSec = "30"
+2017-03-13 00:08:43 INFO: nxt.peerServerDoSFilter.delayMs = "1000"
+2017-03-13 00:08:43 INFO: nxt.peerServerDoSFilter.maxRequestMs = "300000"
+2017-03-13 00:08:43 INFO: nxt.enableDebugAPI = "false"
+2017-03-13 00:08:43 INFO: nxt.allowedBotHosts = "127.0.0.1; localhost; [0:0:0:0:0:0:0:1];"
+2017-03-13 00:08:43 INFO: nxt.enableAPIServer = "true"
+2017-03-13 00:08:43 INFO: nxt.apiServerPort = "8125"
+2017-03-13 00:08:43 INFO: nxt.apiServerHost = "127.0.0.1"
+2017-03-13 00:08:43 INFO: nxt.apiSSL = "false"
+2017-03-13 00:08:43 INFO: nxt.apiServerIdleTimeout = "30000"
+2017-03-13 00:08:43 INFO: nxt.apiResourceBase = "html/ui"
+2017-03-13 00:08:43 INFO: nxt.javadocResourceBase = "html/doc"
+2017-03-13 00:08:43 INFO: nxt.enableAPIServerGZIPFilter = "false"
+2017-03-13 00:08:43 INFO: nxt.apiServerCORS = "false"
+2017-03-13 00:08:44 INFO: nxt.allowedUserHosts = "127.0.0.1; localhost; [0:0:0:0:0:0:0:1];"
+2017-03-13 00:08:44 INFO: nxt.enableUIServer = "false"
+2017-03-13 00:08:44 INFO: User interface server not enabled
+2017-03-13 00:08:44 INFO: nxt.debugTraceQuote = """
+2017-03-13 00:08:44 INFO: nxt.debugTraceSeparator = "	"
+2017-03-13 00:08:44 INFO: nxt.debugLogUnconfirmed = "false"
+2017-03-13 00:08:44 INFO: nxt.debugTraceAccounts not defined
+2017-03-13 00:08:44 INFO: nxt.debugTraceLog = "nxt-trace.csv"
+2017-03-13 00:08:44 INFO: Genesis block not in database, starting from scratch
+2017-03-13 00:08:44 INFO: Scanning blockchain starting from height 0...
+2017-03-13 00:08:44 INFO: processed block 0
+2017-03-13 00:08:44 INFO: ...done at height 0
+2017-03-13 00:08:45 INFO: Started API server at 127.0.0.1:8125
+2017-03-13 00:08:45 INFO: Started peer networking server at 0.0.0.0:8123
+2017-03-13 00:08:45 INFO: Initialization took 5 seconds
+2017-03-13 00:08:45 INFO: Burst server 1.2.8 started successfully.
+2017-03-13 00:08:45 INFO: burst.mockMining = "false"
+2017-03-13 00:09:01 INFO: Finished connecteding to 2 well known peers.
+2017-03-13 00:15:07 INFO: processed block 5000
