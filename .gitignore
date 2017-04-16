@@ -6,3 +6,5 @@ BurstAIOWallet/BookOfSecrets.ldf
 BurstAIOWallet/bin/x64/Release 2/XMLFile1.xml
 BurstAIOWallet/bin/x64/Release 2/savedIds.conf
 BurstAIOWallet/bin/x64/Release 2/logPlots.txt
+BurstAIOWallet/bin/x64/Release 2/Cache/
+BurstAIOWallet/bin/x64/Release 2/XPlotter/AstroCpuStart.bat

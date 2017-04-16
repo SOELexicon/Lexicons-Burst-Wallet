@@ -73,14 +73,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BurstAIOWallet.exe" size="231424">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BurstAIOWallet.exe" size="231936">
       <assemblyIdentity name="BurstAIOWallet" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>o/q77y9A4zzJS+xRwgGGPkeq9t4/XpXEl6MLzFE3L8E=</dsig:DigestValue>
+        <dsig:DigestValue>u2L5lZ1lj51FucQ2wZjoLrpzynywWKUYwAxQWb+8SKA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1371,6 +1371,15 @@
       <dsig:DigestValue>abiliaVa4R+rhJOje5PBPtpvwj0h+RZSyj1PkQRNlaA=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="CefSharp.Core.xml" size="52566">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FWHUdltzIZ4Eyed9PcK+zMsbLd33Q0RHL67Jrj2nsEc=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="CefSharp.pdb" size="241152">
     <hash>
       <dsig:Transforms>
@@ -1387,6 +1396,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>7720J/KwLI6R78qcD6t6O9sX3ygZkjjBoKNn6zMPCCo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="CefSharp.WinForms.xml" size="37766">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iJ4SOZ3NVldB/Zgxebx1kRD5cVIEuCgXoJ7g/hCZxZE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="CefSharp.xml" size="385049">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kklDpJW8DRq+8IEZHucg+hCI8yPmr/FvLVGwJ8RFE+U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="favicon.ico" size="1406">

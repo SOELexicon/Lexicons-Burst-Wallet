@@ -20,25 +20,25 @@ Partial Class SelectWallet
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
-        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LUESelectwallet = New DevExpress.XtraEditors.LookUpEdit()
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.TECode = New DevExpress.XtraEditors.TextEdit()
-        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.pass = New DevExpress.XtraEditors.TextEdit()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.TECode = New DevExpress.XtraEditors.TextEdit()
+        Me.LUESelectwallet = New DevExpress.XtraEditors.LookUpEdit()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
-        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LUESelectwallet.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pass.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TECode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LUESelectwallet.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pass.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
@@ -57,6 +57,49 @@ Partial Class SelectWallet
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
+        'pass
+        '
+        Me.pass.Location = New System.Drawing.Point(16, 112)
+        Me.pass.Name = "pass"
+        Me.pass.Size = New System.Drawing.Size(582, 22)
+        Me.pass.StyleController = Me.LayoutControl1
+        Me.pass.TabIndex = 7
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Location = New System.Drawing.Point(16, 112)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(582, 27)
+        Me.SimpleButton1.StyleController = Me.LayoutControl1
+        Me.SimpleButton1.TabIndex = 6
+        Me.SimpleButton1.Text = "Decrypt"
+        '
+        'TECode
+        '
+        Me.TECode.Location = New System.Drawing.Point(16, 84)
+        Me.TECode.Name = "TECode"
+        Me.TECode.Size = New System.Drawing.Size(582, 22)
+        Me.TECode.StyleController = Me.LayoutControl1
+        Me.TECode.TabIndex = 5
+        '
+        'LUESelectwallet
+        '
+        Me.LUESelectwallet.Location = New System.Drawing.Point(16, 36)
+        Me.LUESelectwallet.Name = "LUESelectwallet"
+        Me.LUESelectwallet.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LUESelectwallet.Size = New System.Drawing.Size(582, 22)
+        Me.LUESelectwallet.StyleController = Me.LayoutControl1
+        Me.LUESelectwallet.TabIndex = 4
+        '
+        'LayoutControlItem4
+        '
+        Me.LayoutControlItem4.Control = Me.pass
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 96)
+        Me.LayoutControlItem4.Name = "LayoutControlItem4"
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(588, 28)
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem4.TextVisible = False
+        '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
@@ -68,15 +111,6 @@ Partial Class SelectWallet
         Me.LayoutControlGroup1.Size = New System.Drawing.Size(614, 160)
         Me.LayoutControlGroup1.TextVisible = False
         '
-        'LUESelectwallet
-        '
-        Me.LUESelectwallet.Location = New System.Drawing.Point(16, 36)
-        Me.LUESelectwallet.Name = "LUESelectwallet"
-        Me.LUESelectwallet.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.LUESelectwallet.Size = New System.Drawing.Size(582, 22)
-        Me.LUESelectwallet.StyleController = Me.LayoutControl1
-        Me.LUESelectwallet.TabIndex = 4
-        '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.LUESelectwallet
@@ -86,14 +120,6 @@ Partial Class SelectWallet
         Me.LayoutControlItem1.Text = "Select Wallet"
         Me.LayoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(102, 16)
-        '
-        'TECode
-        '
-        Me.TECode.Location = New System.Drawing.Point(16, 84)
-        Me.TECode.Name = "TECode"
-        Me.TECode.Size = New System.Drawing.Size(582, 22)
-        Me.TECode.StyleController = Me.LayoutControl1
-        Me.TECode.TabIndex = 5
         '
         'LayoutControlItem2
         '
@@ -105,15 +131,6 @@ Partial Class SelectWallet
         Me.LayoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(102, 16)
         '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Location = New System.Drawing.Point(16, 112)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(582, 27)
-        Me.SimpleButton1.StyleController = Me.LayoutControl1
-        Me.SimpleButton1.TabIndex = 6
-        Me.SimpleButton1.Text = "Decrypt"
-        '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.SimpleButton1
@@ -122,23 +139,6 @@ Partial Class SelectWallet
         Me.LayoutControlItem3.Size = New System.Drawing.Size(588, 38)
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
-        '
-        'pass
-        '
-        Me.pass.Location = New System.Drawing.Point(16, 112)
-        Me.pass.Name = "pass"
-        Me.pass.Size = New System.Drawing.Size(582, 22)
-        Me.pass.StyleController = Me.LayoutControl1
-        Me.pass.TabIndex = 7
-        '
-        'LayoutControlItem4
-        '
-        Me.LayoutControlItem4.Control = Me.pass
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 96)
-        Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(588, 28)
-        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem4.TextVisible = False
         '
         'SelectWallet
         '
@@ -150,14 +150,14 @@ Partial Class SelectWallet
         Me.Text = "SelectWallet"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
-        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LUESelectwallet.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pass.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TECode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LUESelectwallet.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pass.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

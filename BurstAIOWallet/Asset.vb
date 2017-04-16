@@ -271,6 +271,9 @@ Public Class Asset
         GenerateAssetCandles(assetID)
         SplashScreenManager.Default.SetWaitFormCaption("Retreiving Orders")
         GetAssetBuysAndSells(assetID, CType(Results(0), Integer))
+        GridView3.BestFitColumns()
+        GridView4.BestFitColumns()
+
         Try
             DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm()
         Catch ex As Exception

@@ -13,7 +13,13 @@ Public Class SelectWallet
         LUESelectwallet.Properties.DataSource = callAPI.getPasswordTable
         LUESelectwallet.Properties.DisplayMember = "WalletName"
         LUESelectwallet.Properties.ValueMember = "WalletPass"
-        LUESelectwallet.Properties.Columns(0).Width = 100
+        LUESelectwallet.Properties.PopulateColumns()
+        LUESelectwallet.Properties.Columns("WalletPass").Visible = False
+
+        LUESelectwallet.Properties.BestFit()
+        SimpleButton1.DialogResult = System.Windows.Forms.DialogResult.OK
+
+
     End Sub
     
     Dim APICall As callAPI = New callAPI
@@ -27,6 +33,7 @@ Public Class SelectWallet
         Else
             pass.EditValue = APICall.AES_Decrypt(LUESelectwallet.EditValue, TECode.EditValue).ToString
             SimpleButton1.DialogResult = System.Windows.Forms.DialogResult.OK
+
         End If
 
     End Sub
