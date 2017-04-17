@@ -281,3 +281,6 @@ C:\BurstAIOWallet - Copy (2)\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.vbp
 C:\BurstAIOWallet - Copy (2)\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.exe.licenses
 C:\BurstAIOWallet - Copy (2)\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.exe.manifest
 C:\BurstAIOWallet - Copy (2)\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.application
+C:\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\CefSharp.WinForms.xml
+C:\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\CefSharp.xml
+C:\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\CefSharp.Core.xml

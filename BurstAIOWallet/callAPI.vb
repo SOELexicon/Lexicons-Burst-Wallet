@@ -374,6 +374,26 @@ Public Class callAPI
         Return responseFromServer
     End Function
 
+    Public Shared Function getAccountTransactions(url As String, account As String, numberofconfirmations As String)
+        Dim serverurl As String = url
+        Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=getAccountTransactions")
+        request.Method = "POST"
+        Dim postData As String = "&account=" & account & "&numberOfConfirmations=" & numberofconfirmations
+        Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
+        request.ContentType = "application/x-www-form-urlencoded"
+        request.ContentLength = byteArray.Length
+        Dim dataStream As Stream = request.GetRequestStream()
+        dataStream.Write(byteArray, 0, byteArray.Length)
+        dataStream.Close()
+        Dim response As WebResponse = request.GetResponse()
+        dataStream = response.GetResponseStream()
+        Dim reader As New StreamReader(dataStream)
+        Dim responseFromServer As String = reader.ReadToEnd()
+        reader.Close()
+        dataStream.Close()
+        response.Close()
+        Return responseFromServer
+    End Function
     Public Shared Function getFastestWallet(Optional timeout As Int64 = 10000)
         Static start_time As DateTime
         Static stop_time As DateTime

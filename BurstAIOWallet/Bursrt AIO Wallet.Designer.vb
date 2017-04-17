@@ -28,10 +28,6 @@ Partial Class BurstWallet
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
-        Me.NavBarGroup5 = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.NBIBcasino = New DevExpress.XtraNavBar.NavBarItem()
-        Me.NBIBurstNation = New DevExpress.XtraNavBar.NavBarItem()
-        Me.NBILotto = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarGroup1 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NBILocal = New DevExpress.XtraNavBar.NavBarItem()
         Me.NBIBNWallet1 = New DevExpress.XtraNavBar.NavBarItem()
@@ -51,6 +47,10 @@ Partial Class BurstWallet
         Me.NBINetExplore = New DevExpress.XtraNavBar.NavBarItem()
         Me.NBIBlockExplorer = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarItem2 = New DevExpress.XtraNavBar.NavBarItem()
+        Me.NavBarGroup5 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.NBIBcasino = New DevExpress.XtraNavBar.NavBarItem()
+        Me.NBIBurstNation = New DevExpress.XtraNavBar.NavBarItem()
+        Me.NBILotto = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarSeparatorItem1 = New DevExpress.XtraNavBar.NavBarSeparatorItem()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar2 = New DevExpress.XtraBars.Bar()
@@ -122,31 +122,6 @@ Partial Class BurstWallet
         Me.NavBarControl1.Size = New System.Drawing.Size(182, 580)
         Me.NavBarControl1.TabIndex = 4
         Me.NavBarControl1.Text = "NavBarControl1"
-        '
-        'NavBarGroup5
-        '
-        Me.NavBarGroup5.Caption = "Games & Social"
-        Me.NavBarGroup5.Expanded = True
-        Me.NavBarGroup5.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIBcasino), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIBurstNation), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBILotto)})
-        Me.NavBarGroup5.Name = "NavBarGroup5"
-        '
-        'NBIBcasino
-        '
-        Me.NBIBcasino.Caption = "Burst Casino"
-        Me.NBIBcasino.Name = "NBIBcasino"
-        Me.NBIBcasino.SmallImage = CType(resources.GetObject("NBIBcasino.SmallImage"), System.Drawing.Image)
-        '
-        'NBIBurstNation
-        '
-        Me.NBIBurstNation.Caption = "Burst Nation Forum"
-        Me.NBIBurstNation.Name = "NBIBurstNation"
-        Me.NBIBurstNation.SmallImage = CType(resources.GetObject("NBIBurstNation.SmallImage"), System.Drawing.Image)
-        '
-        'NBILotto
-        '
-        Me.NBILotto.Caption = "Burst Lottery"
-        Me.NBILotto.Name = "NBILotto"
-        Me.NBILotto.SmallImage = CType(resources.GetObject("NBILotto.SmallImage"), System.Drawing.Image)
         '
         'NavBarGroup1
         '
@@ -231,12 +206,11 @@ Partial Class BurstWallet
         '
         Me.NBIMine.Caption = "Mine"
         Me.NBIMine.Name = "NBIMine"
-        Me.NBIMine.SmallImage = Global.Wallet.My.Resources.Resources.pickaxe
+        Me.NBIMine.SmallImage = CType(resources.GetObject("NBIMine.SmallImage"), System.Drawing.Image)
         '
         'NavBarGroup4
         '
         Me.NavBarGroup4.Caption = "Tools"
-        Me.NavBarGroup4.Expanded = True
         Me.NavBarGroup4.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIAssetExplorer), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBINetExplore), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIBlockExplorer), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem2)})
         Me.NavBarGroup4.Name = "NavBarGroup4"
         '
@@ -264,6 +238,30 @@ Partial Class BurstWallet
         Me.NavBarItem2.Caption = "New Interface Test"
         Me.NavBarItem2.Name = "NavBarItem2"
         Me.NavBarItem2.SmallImage = CType(resources.GetObject("NavBarItem2.SmallImage"), System.Drawing.Image)
+        '
+        'NavBarGroup5
+        '
+        Me.NavBarGroup5.Caption = "Games & Social"
+        Me.NavBarGroup5.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIBcasino), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIBurstNation), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBILotto)})
+        Me.NavBarGroup5.Name = "NavBarGroup5"
+        '
+        'NBIBcasino
+        '
+        Me.NBIBcasino.Caption = "Burst Casino"
+        Me.NBIBcasino.Name = "NBIBcasino"
+        Me.NBIBcasino.SmallImage = CType(resources.GetObject("NBIBcasino.SmallImage"), System.Drawing.Image)
+        '
+        'NBIBurstNation
+        '
+        Me.NBIBurstNation.Caption = "Burst Nation Forum"
+        Me.NBIBurstNation.Name = "NBIBurstNation"
+        Me.NBIBurstNation.SmallImage = CType(resources.GetObject("NBIBurstNation.SmallImage"), System.Drawing.Image)
+        '
+        'NBILotto
+        '
+        Me.NBILotto.Caption = "Burst Lottery"
+        Me.NBILotto.Name = "NBILotto"
+        Me.NBILotto.SmallImage = CType(resources.GetObject("NBILotto.SmallImage"), System.Drawing.Image)
         '
         'NavBarSeparatorItem1
         '

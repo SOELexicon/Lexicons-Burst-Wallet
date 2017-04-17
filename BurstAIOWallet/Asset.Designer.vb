@@ -19,15 +19,26 @@ Partial Class Asset
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim XyDiagram3 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
-        Dim SecondaryAxisY3 As DevExpress.XtraCharts.SecondaryAxisY = New DevExpress.XtraCharts.SecondaryAxisY()
-        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SideBySideBarSeriesView3 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
-        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim CandleStickSeriesView3 As DevExpress.XtraCharts.CandleStickSeriesView = New DevExpress.XtraCharts.CandleStickSeriesView()
+        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView1 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim XyDiagram2 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim SecondaryAxisY1 As DevExpress.XtraCharts.SecondaryAxisY = New DevExpress.XtraCharts.SecondaryAxisY()
+        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
+        Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim CandleStickSeriesView1 As DevExpress.XtraCharts.CandleStickSeriesView = New DevExpress.XtraCharts.CandleStickSeriesView()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.GridControl4 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView6 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.ChartControl2 = New DevExpress.XtraCharts.ChartControl()
+        Me.assetTransfersGC = New DevExpress.XtraGrid.GridControl()
+        Me.assetTransfersGridview = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.TransferButtonEdit = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
+        Me.GridControl3 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView5 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.TEAssetAccountRS = New DevExpress.XtraEditors.TextEdit()
         Me.TETradeCount = New DevExpress.XtraEditors.TextEdit()
         Me.TEAccountCount = New DevExpress.XtraEditors.TextEdit()
@@ -71,6 +82,9 @@ Partial Class Asset
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.TabbedControlGroup1 = New DevExpress.XtraLayout.TabbedControlGroup()
+        Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem23 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem24 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -90,10 +104,27 @@ Partial Class Asset
         Me.LayoutControlItem18 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem19 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem20 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.TabbedControlGroup2 = New DevExpress.XtraLayout.TabbedControlGroup()
+        Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem22 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup5 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem21 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
+        CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.assetTransfersGC, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.assetTransfersGridview, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransferButtonEdit, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TEAssetAccountRS.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TETradeCount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TEAccountCount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,17 +159,20 @@ Partial Class Asset
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(XyDiagram3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SecondaryAxisY3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SideBySideBarSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(CandleStickSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SecondaryAxisY1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(CandleStickSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtAddAsset.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem24, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -158,6 +192,12 @@ Partial Class Asset
         CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridControl1
@@ -179,6 +219,10 @@ Partial Class Asset
         '
         'LayoutControl1
         '
+        Me.LayoutControl1.Controls.Add(Me.GridControl4)
+        Me.LayoutControl1.Controls.Add(Me.ChartControl2)
+        Me.LayoutControl1.Controls.Add(Me.assetTransfersGC)
+        Me.LayoutControl1.Controls.Add(Me.GridControl3)
         Me.LayoutControl1.Controls.Add(Me.TEAssetAccountRS)
         Me.LayoutControl1.Controls.Add(Me.TETradeCount)
         Me.LayoutControl1.Controls.Add(Me.TEAccountCount)
@@ -198,11 +242,78 @@ Partial Class Asset
         Me.LayoutControl1.HiddenItems.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem8})
         Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl1.Name = "LayoutControl1"
-        Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(632, 0, 312, 373)
+        Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1285, 62, 312, 373)
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
         Me.LayoutControl1.Size = New System.Drawing.Size(1288, 744)
         Me.LayoutControl1.TabIndex = 1
         Me.LayoutControl1.Text = "LayoutControl1"
+        '
+        'GridControl4
+        '
+        Me.GridControl4.Location = New System.Drawing.Point(31, 448)
+        Me.GridControl4.MainView = Me.GridView6
+        Me.GridControl4.Name = "GridControl4"
+        Me.GridControl4.Size = New System.Drawing.Size(1226, 265)
+        Me.GridControl4.TabIndex = 18
+        Me.GridControl4.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView6})
+        '
+        'GridView6
+        '
+        Me.GridView6.GridControl = Me.GridControl4
+        Me.GridView6.Name = "GridView6"
+        '
+        'ChartControl2
+        '
+        XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
+        Me.ChartControl2.Diagram = XyDiagram1
+        Me.ChartControl2.Location = New System.Drawing.Point(31, 178)
+        Me.ChartControl2.Name = "ChartControl2"
+        Series1.ArgumentDataMember = "DateTime"
+        Series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series1.Name = "Series 1"
+        Series1.ValueDataMembersSerializable = "amountNQT"
+        Series1.View = LineSeriesView1
+        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Me.ChartControl2.Size = New System.Drawing.Size(1226, 264)
+        Me.ChartControl2.TabIndex = 17
+        '
+        'assetTransfersGC
+        '
+        Me.assetTransfersGC.Location = New System.Drawing.Point(46, 221)
+        Me.assetTransfersGC.MainView = Me.assetTransfersGridview
+        Me.assetTransfersGC.Name = "assetTransfersGC"
+        Me.assetTransfersGC.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.TransferButtonEdit})
+        Me.assetTransfersGC.Size = New System.Drawing.Size(1196, 477)
+        Me.assetTransfersGC.TabIndex = 15
+        Me.assetTransfersGC.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.assetTransfersGridview})
+        '
+        'assetTransfersGridview
+        '
+        Me.assetTransfersGridview.GridControl = Me.assetTransfersGC
+        Me.assetTransfersGridview.Name = "assetTransfersGridview"
+        Me.assetTransfersGridview.OptionsBehavior.Editable = False
+        Me.assetTransfersGridview.OptionsBehavior.ReadOnly = True
+        '
+        'TransferButtonEdit
+        '
+        Me.TransferButtonEdit.AutoHeight = False
+        Me.TransferButtonEdit.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.TransferButtonEdit.Name = "TransferButtonEdit"
+        '
+        'GridControl3
+        '
+        Me.GridControl3.Location = New System.Drawing.Point(46, 221)
+        Me.GridControl3.MainView = Me.GridView5
+        Me.GridControl3.Name = "GridControl3"
+        Me.GridControl3.Size = New System.Drawing.Size(1196, 477)
+        Me.GridControl3.TabIndex = 14
+        Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView5})
+        '
+        'GridView5
+        '
+        Me.GridView5.GridControl = Me.GridControl3
+        Me.GridView5.Name = "GridView5"
         '
         'TEAssetAccountRS
         '
@@ -252,7 +363,7 @@ Partial Class Asset
         'PopupContainerControl1
         '
         Me.PopupContainerControl1.Controls.Add(Me.LayoutControl2)
-        Me.PopupContainerControl1.Location = New System.Drawing.Point(543, 282)
+        Me.PopupContainerControl1.Location = New System.Drawing.Point(1258, 253)
         Me.PopupContainerControl1.Name = "PopupContainerControl1"
         Me.PopupContainerControl1.Size = New System.Drawing.Size(557, 172)
         Me.PopupContainerControl1.TabIndex = 12
@@ -557,10 +668,10 @@ Partial Class Asset
         '
         'GridControl2
         '
-        Me.GridControl2.Location = New System.Drawing.Point(346, 218)
+        Me.GridControl2.Location = New System.Drawing.Point(161, 221)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Name = "GridControl2"
-        Me.GridControl2.Size = New System.Drawing.Size(490, 174)
+        Me.GridControl2.Size = New System.Drawing.Size(780, 477)
         Me.GridControl2.TabIndex = 7
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
@@ -571,35 +682,35 @@ Partial Class Asset
         '
         'ChartControl1
         '
-        XyDiagram3.AxisX.VisibleInPanesSerializable = "-1"
-        XyDiagram3.AxisY.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
-        XyDiagram3.AxisY.Title.Text = "Price"
-        XyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.[Default]
-        XyDiagram3.AxisY.VisibleInPanesSerializable = "-1"
-        SecondaryAxisY3.AxisID = 0
-        SecondaryAxisY3.Name = "Secondary AxisY 1"
-        SecondaryAxisY3.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
-        SecondaryAxisY3.Title.Text = "Volume"
-        SecondaryAxisY3.Title.Visibility = DevExpress.Utils.DefaultBoolean.[True]
-        SecondaryAxisY3.VisibleInPanesSerializable = "-1"
-        XyDiagram3.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SecondaryAxisY() {SecondaryAxisY3})
-        Me.ChartControl1.Diagram = XyDiagram3
+        XyDiagram2.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram2.AxisY.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
+        XyDiagram2.AxisY.Title.Text = "Price"
+        XyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.[Default]
+        XyDiagram2.AxisY.VisibleInPanesSerializable = "-1"
+        SecondaryAxisY1.AxisID = 0
+        SecondaryAxisY1.Name = "Secondary AxisY 1"
+        SecondaryAxisY1.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
+        SecondaryAxisY1.Title.Text = "Volume"
+        SecondaryAxisY1.Title.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        SecondaryAxisY1.VisibleInPanesSerializable = "-1"
+        XyDiagram2.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SecondaryAxisY() {SecondaryAxisY1})
+        Me.ChartControl1.Diagram = XyDiagram2
         Me.ChartControl1.Location = New System.Drawing.Point(270, 274)
         Me.ChartControl1.Name = "ChartControl1"
         Me.ChartControl1.PaletteBaseColorNumber = 1
-        Series5.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series5.Name = "Volume"
-        Series5.ValueDataMembersSerializable = "Volume"
-        SideBySideBarSeriesView3.AxisYName = "Secondary AxisY 1"
-        SideBySideBarSeriesView3.Transparency = CType(100, Byte)
-        Series5.View = SideBySideBarSeriesView3
-        Series6.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series6.Name = "Price"
-        Series6.ValueDataMembersSerializable = "Low;High;Open;Close"
-        CandleStickSeriesView3.Color = System.Drawing.Color.Green
-        CandleStickSeriesView3.ReductionOptions.Color = System.Drawing.Color.DarkRed
-        Series6.View = CandleStickSeriesView3
-        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series5, Series6}
+        Series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series2.Name = "Volume"
+        Series2.ValueDataMembersSerializable = "Volume"
+        SideBySideBarSeriesView1.AxisYName = "Secondary AxisY 1"
+        SideBySideBarSeriesView1.Transparency = CType(100, Byte)
+        Series2.View = SideBySideBarSeriesView1
+        Series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series3.Name = "Price"
+        Series3.ValueDataMembersSerializable = "Low;High;Open;Close"
+        CandleStickSeriesView1.Color = System.Drawing.Color.Green
+        CandleStickSeriesView1.ReductionOptions.Color = System.Drawing.Color.DarkRed
+        Series3.View = CandleStickSeriesView1
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2, Series3}
         Me.ChartControl1.Size = New System.Drawing.Size(987, 185)
         Me.ChartControl1.TabIndex = 6
         '
@@ -623,9 +734,9 @@ Partial Class Asset
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.GridControl2
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(215, 202)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(611, 180)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(901, 483)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(50, 20)
         '
         'LayoutControlGroup1
@@ -655,10 +766,37 @@ Partial Class Asset
         '
         Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 119)
         Me.TabbedControlGroup1.Name = "TabbedControlGroup1"
-        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup2
+        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup6
         Me.TabbedControlGroup1.SelectedTabPageIndex = 0
         Me.TabbedControlGroup1.Size = New System.Drawing.Size(1262, 599)
-        Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup2})
+        Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup6, Me.LayoutControlGroup2, Me.LayoutControlGroup3})
+        '
+        'LayoutControlGroup6
+        '
+        Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem23, Me.LayoutControlItem24})
+        Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
+        Me.LayoutControlGroup6.OptionsItemText.TextToControlDistance = 4
+        Me.LayoutControlGroup6.Size = New System.Drawing.Size(1232, 541)
+        Me.LayoutControlGroup6.Text = "Transactions"
+        '
+        'LayoutControlItem23
+        '
+        Me.LayoutControlItem23.Control = Me.ChartControl2
+        Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem23.Name = "LayoutControlItem23"
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(1232, 270)
+        Me.LayoutControlItem23.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem23.TextVisible = False
+        '
+        'LayoutControlItem24
+        '
+        Me.LayoutControlItem24.Control = Me.GridControl4
+        Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 270)
+        Me.LayoutControlItem24.Name = "LayoutControlItem24"
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(1232, 271)
+        Me.LayoutControlItem24.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem24.TextVisible = False
         '
         'LayoutControlGroup2
         '
@@ -833,6 +971,60 @@ Partial Class Asset
         Me.LayoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(71, 16)
         '
+        'LayoutControlGroup3
+        '
+        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.TabbedControlGroup2})
+        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
+        Me.LayoutControlGroup3.OptionsItemText.TextToControlDistance = 4
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(1232, 541)
+        Me.LayoutControlGroup3.Text = "Asset Management"
+        '
+        'TabbedControlGroup2
+        '
+        Me.TabbedControlGroup2.Location = New System.Drawing.Point(0, 0)
+        Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
+        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
+        Me.TabbedControlGroup2.SelectedTabPageIndex = 1
+        Me.TabbedControlGroup2.Size = New System.Drawing.Size(1232, 541)
+        Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
+        '
+        'LayoutControlGroup7
+        '
+        Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem22})
+        Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
+        Me.LayoutControlGroup7.OptionsItemText.TextToControlDistance = 4
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlGroup7.Text = "Transfer Assets"
+        '
+        'LayoutControlItem22
+        '
+        Me.LayoutControlItem22.Control = Me.assetTransfersGC
+        Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem22.Name = "LayoutControlItem22"
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlItem22.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem22.TextVisible = False
+        '
+        'LayoutControlGroup5
+        '
+        Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem21})
+        Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
+        Me.LayoutControlGroup5.OptionsItemText.TextToControlDistance = 4
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlGroup5.Text = "Dividend Payout"
+        '
+        'LayoutControlItem21
+        '
+        Me.LayoutControlItem21.Control = Me.GridControl3
+        Me.LayoutControlItem21.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem21.Name = "LayoutControlItem21"
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlItem21.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem21.TextVisible = False
+        '
         'Asset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -840,11 +1032,22 @@ Partial Class Asset
         Me.ClientSize = New System.Drawing.Size(1288, 744)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Name = "Asset"
-        Me.Text = "Asset"
+        Me.Text = "Wallet: "
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
+        CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.assetTransfersGC, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.assetTransfersGridview, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransferButtonEdit, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TEAssetAccountRS.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TETradeCount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TEAccountCount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -879,18 +1082,21 @@ Partial Class Asset
         CType(Me.TEAccountRS.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SecondaryAxisY3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(XyDiagram3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SideBySideBarSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(CandleStickSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SecondaryAxisY1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(CandleStickSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtAddAsset.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -910,6 +1116,12 @@ Partial Class Asset
         CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -978,4 +1190,21 @@ Partial Class Asset
     Friend WithEvents TEBSQty As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents TSBSPrice As DevExpress.XtraEditors.CalcEdit
     Friend WithEvents TEBSTxFee As DevExpress.XtraEditors.CalcEdit
+    Friend WithEvents LayoutControlGroup3 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents TabbedControlGroup2 As DevExpress.XtraLayout.TabbedControlGroup
+    Friend WithEvents LayoutControlGroup5 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlGroup6 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents assetTransfersGC As DevExpress.XtraGrid.GridControl
+    Friend WithEvents assetTransfersGridview As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GridControl3 As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView5 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents LayoutControlGroup7 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem22 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem21 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents TransferButtonEdit As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
+    Friend WithEvents ChartControl2 As DevExpress.XtraCharts.ChartControl
+    Friend WithEvents LayoutControlItem23 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents GridControl4 As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView6 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents LayoutControlItem24 As DevExpress.XtraLayout.LayoutControlItem
 End Class
