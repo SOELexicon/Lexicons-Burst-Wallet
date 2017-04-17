@@ -85,29 +85,29 @@ Partial Class BurstWallet
         '
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 38)
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 29)
         Me.barDockControlTop.Size = New System.Drawing.Size(1257, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 618)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 614)
         Me.barDockControlBottom.Size = New System.Drawing.Size(1257, 0)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 38)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 580)
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 29)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 585)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1257, 38)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 580)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1257, 29)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 585)
         '
         'NavBarControl1
         '
@@ -115,11 +115,11 @@ Partial Class BurstWallet
         Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
         Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.NavBarGroup1, Me.NavBarGroup2, Me.NavBarGroup3, Me.NavBarGroup4, Me.NavBarGroup5})
         Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.NavBarSeparatorItem1, Me.NBILocal, Me.NBINationFaucet, Me.NBIBNWallet1, Me.NBIBNWallet2, Me.NBIBNWallet3, Me.NBIBNUsa, Me.NBIPlotter, Me.NBIMine, Me.NBIAssetExplorer, Me.NBIPoD, Me.NBIBcasino, Me.NBINetExplore, Me.NBINixxdaWallet, Me.NBIFastestWallet, Me.NBIBurstNation, Me.NavBarItem2, Me.NBIBlockExplorer, Me.NBILotto})
-        Me.NavBarControl1.Location = New System.Drawing.Point(0, 38)
+        Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 182
         Me.NavBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane
-        Me.NavBarControl1.Size = New System.Drawing.Size(182, 580)
+        Me.NavBarControl1.Size = New System.Drawing.Size(182, 585)
         Me.NavBarControl1.TabIndex = 4
         Me.NavBarControl1.Text = "NavBarControl1"
         '
@@ -334,28 +334,28 @@ Partial Class BurstWallet
         Me.BarDockControl1.CausesValidation = False
         Me.BarDockControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.BarDockControl1.Location = New System.Drawing.Point(0, 0)
-        Me.BarDockControl1.Size = New System.Drawing.Size(1257, 38)
+        Me.BarDockControl1.Size = New System.Drawing.Size(1257, 29)
         '
         'BarDockControl2
         '
         Me.BarDockControl2.CausesValidation = False
         Me.BarDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BarDockControl2.Location = New System.Drawing.Point(0, 618)
-        Me.BarDockControl2.Size = New System.Drawing.Size(1257, 21)
+        Me.BarDockControl2.Location = New System.Drawing.Point(0, 614)
+        Me.BarDockControl2.Size = New System.Drawing.Size(1257, 25)
         '
         'BarDockControl3
         '
         Me.BarDockControl3.CausesValidation = False
         Me.BarDockControl3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.BarDockControl3.Location = New System.Drawing.Point(0, 38)
-        Me.BarDockControl3.Size = New System.Drawing.Size(0, 580)
+        Me.BarDockControl3.Location = New System.Drawing.Point(0, 29)
+        Me.BarDockControl3.Size = New System.Drawing.Size(0, 585)
         '
         'BarDockControl4
         '
         Me.BarDockControl4.CausesValidation = False
         Me.BarDockControl4.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BarDockControl4.Location = New System.Drawing.Point(1257, 38)
-        Me.BarDockControl4.Size = New System.Drawing.Size(0, 580)
+        Me.BarDockControl4.Location = New System.Drawing.Point(1257, 29)
+        Me.BarDockControl4.Size = New System.Drawing.Size(0, 585)
         '
         'XtraTabbedMdiManager1
         '

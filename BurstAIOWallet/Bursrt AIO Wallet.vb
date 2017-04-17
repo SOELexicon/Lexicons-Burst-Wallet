@@ -248,9 +248,13 @@ Public Class BurstWallet
 
     End Sub
     Public Sub showassetform(passphrase As String)
+
         Try
             DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
+        Catch ex As Exception
 
+        End Try
+        Try
             Dim f = New Asset
             Dim json As JObject = JObject.Parse(callAPI.getAccountId(fastestwallet.Replace("/burst?requestType=getMiningInfo", "/"), passphrase))
             f.BurstID = json.SelectToken("account").ToString()

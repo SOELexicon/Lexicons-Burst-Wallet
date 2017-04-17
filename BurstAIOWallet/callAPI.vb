@@ -394,6 +394,46 @@ Public Class callAPI
         response.Close()
         Return responseFromServer
     End Function
+    Public Shared Function getAssetAccounts(url As String, asset As String)
+        Dim serverurl As String = url
+        Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=getAssetAccounts")
+        request.Method = "POST"
+        Dim postData As String = "&asset=" & asset
+        Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
+        request.ContentType = "application/x-www-form-urlencoded"
+        request.ContentLength = byteArray.Length
+        Dim dataStream As Stream = request.GetRequestStream()
+        dataStream.Write(byteArray, 0, byteArray.Length)
+        dataStream.Close()
+        Dim response As WebResponse = request.GetResponse()
+        dataStream = response.GetResponseStream()
+        Dim reader As New StreamReader(dataStream)
+        Dim responseFromServer As String = reader.ReadToEnd()
+        reader.Close()
+        dataStream.Close()
+        response.Close()
+        Return responseFromServer
+    End Function
+    Public Shared Function sendMoney(url As String, recipient As String, amountNQT As String, secretPhrase As String, feeNQT As String)
+        Dim serverurl As String = url
+        Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=sendMoney")
+        request.Method = "POST"
+        Dim postData As String = "&recipient=" & recipient & "&amountNQT=" & amountNQT & "&secretPhrase=" & secretPhrase & "&feeNQT=" & (feeNQT * 100000000) & "&deadline=1440"
+        Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
+        request.ContentType = "application/x-www-form-urlencoded"
+        request.ContentLength = byteArray.Length
+        Dim dataStream As Stream = request.GetRequestStream()
+        dataStream.Write(byteArray, 0, byteArray.Length)
+        dataStream.Close()
+        Dim response As WebResponse = request.GetResponse()
+        dataStream = response.GetResponseStream()
+        Dim reader As New StreamReader(dataStream)
+        Dim responseFromServer As String = reader.ReadToEnd()
+        reader.Close()
+        dataStream.Close()
+        response.Close()
+        Return responseFromServer
+    End Function
     Public Shared Function getFastestWallet(Optional timeout As Int64 = 10000)
         Static start_time As DateTime
         Static stop_time As DateTime

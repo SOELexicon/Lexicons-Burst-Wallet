@@ -15,7 +15,7 @@ Public Class Asset
     Public BurstPublicKey As String
 
     Dim xmlDataSet As System.Data.DataSet
-    Dim assetinview, assetbuys, assetSells, assetsowned, transactionstable, transactionschart As DataTable
+    Dim assetinview, assetbuys, assetSells, assetsowned, transactionstable, transactionschart, assetaccountsdt As DataTable
 
     Private Sub Asset_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SplashScreenManager.Default.SetWaitFormCaption("Loading Local Asset DB")
@@ -69,6 +69,7 @@ Public Class Asset
             .Columns.Add(New DataColumn("Name", GetType(String)))
             .Columns.Add(New DataColumn("Decimals", GetType(Integer)))
             .Columns.Add(New DataColumn("amountNQT", GetType(Decimal)))
+            .Columns.Add(New DataColumn("Value", GetType(Decimal)))
         End With
         transactionstable = New DataTable("Transactions")
         With transactionstable
@@ -83,7 +84,7 @@ Public Class Asset
         TEName.Text = json.SelectToken("name").ToString()
         TEBalance.Text = (Int64.Parse(json.SelectToken("effectiveBalanceNXT").ToString()) / 100000000)
         SplashScreenManager.Default.SetWaitFormCaption("Fetching Asset Balance's")
-
+        Dim assettotalvalue As Decimal = 0
         If json.SelectToken("assetBalances").Count > 0 Then
             For i As Integer = 0 To json.SelectToken("assetBalances").Count - 1
                 Dim balanceasset As Decimal = CType(json("assetBalances")(i)("balanceQNT"), Decimal)
@@ -92,24 +93,51 @@ Public Class Asset
                 Dim jsonAssetInfo As JObject = JObject.Parse(callAPI.getAsset(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), asset))
                 Dim assetname As String = jsonAssetInfo("name")
                 Dim assetdecimals As Integer = jsonAssetInfo("decimals")
-
-                assetsowned.Rows.Add(asset, assetname, assetdecimals, balanceasset / Math.Pow(10, assetdecimals))
+                Dim assettrade As JObject = JObject.Parse(callAPI.getBidOrders(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), asset))
+                Dim assetvalue As Decimal
+                If assettrade("bidOrders").Count > 0 Then
+                    assetvalue = ((CType(assettrade("bidOrders")(0)("priceNQT"), Int64) / 100000000) * Math.Pow(10, assetdecimals)) * (balanceasset / Math.Pow(10, assetdecimals))
+                Else
+                    assetvalue = 0
+                End If
+                assettotalvalue += assetvalue
+                assetsowned.Rows.Add(asset, assetname, assetdecimals, balanceasset / Math.Pow(10, assetdecimals), assetvalue)
 
             Next
             assetsowned.AcceptChanges()
 
         End If
+        TEAssetValue.Text = assettotalvalue
+        TEAccountValue.Text = CType(TEBalance.EditValue, Decimal) + CType(TEAssetValue.EditValue, Decimal)
+
         assetTransfersGC.DataSource = assetsowned
         ' assetTransfersGC.DataSource
         SplashScreenManager.Default.SetWaitFormCaption("Fetching Transaction's")
 
-        Dim jsonTransactions As JObject = JObject.Parse(callAPI.getAccountTransactions(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), BurstID, "0"))
-        Dim balance As Decimal = TEBalance.Text
+        GenerateTransactionDataSet()
+
         transactionschart = New DataTable("Transactions")
         With transactionschart
             .Columns.Add(New DataColumn("DateTime", GetType(DateTime)))
             .Columns.Add(New DataColumn("amountNQT", GetType(Decimal)))
         End With
+        SplashScreenManager.Default.SetWaitFormCaption("Processing Transaction Data For Chart")
+
+        GenerateTransactionChartDataSet()
+        DPLUEAssetID.Properties.DataSource = assetsowned
+        DPLUEAssetID.Properties.DisplayMember = "AssetID"
+        DPLUEAssetID.Properties.ValueMember = "AssetID"
+        ChartControl2.DataSource = transactionschart
+        GridControl4.DataSource = transactionstable
+
+        Try
+            DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Private Sub GenerateTransactionDataSet()
+        Dim jsonTransactions As JObject = JObject.Parse(callAPI.getAccountTransactions(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), BurstID, "0"))
 
         If jsonTransactions("transactions").Count > 0 Then
             For i As Integer = 0 To jsonTransactions("transactions").Count - 1
@@ -121,7 +149,7 @@ Public Class Asset
                     Dim ammount As Decimal = CType(.SelectToken("amountNQT"), Int64) / 100000000
 
                     Dim transactiondatetim As DateTime = burstEpoch.AddSeconds(CType(.SelectToken("timestamp"), Int64)).ToShortDateString
-                   
+
                     If senderrs = BurstRS Then
                         sendreceive = "Sent"
                         transactionstable.Rows.Add(transactiondatetim, senderrs, recipientRS, sendreceive, -ammount, fee)
@@ -133,19 +161,24 @@ Public Class Asset
 
 
                 End With
-           
+
 
             Next
             transactionstable.AcceptChanges()
+
+        End If
+    End Sub
+
+
+    Private Sub GenerateTransactionChartDataSet()
+        transactionschart.Clear()
+        If transactionstable.Rows.Count > 0 Then
             Dim chartbalance As Decimal = 0
             Dim chartdate As DateTime
-
-
             For i As Integer = 0 To transactionstable.Rows.Count - 1
                 If i = 0 Then
                     chartdate = transactionstable.Rows(i)(0)
                     chartbalance = transactionstable.Rows(i)(4)
-
                 Else
                     If chartdate <> transactionstable.Rows(i)(0) Then
                         transactionschart.Rows.Add(transactionstable.Rows(i - 1)(0), chartbalance)
@@ -161,24 +194,10 @@ Public Class Asset
 
                     End If
                 End If
-
-
             Next
-            transactionschart.AcceptChanges()
-
-            ' GridControl2.DataSource = assetinview
-            ChartControl2.DataSource = transactionschart
-            'ChartControl1.Series.Clear()
-            GridControl4.DataSource = transactionstable
-
-
         End If
+        transactionschart.AcceptChanges()
 
-        Try
-            DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm()
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
@@ -197,7 +216,7 @@ Public Class Asset
         Catch ex As Exception
 
         End Try
-   
+
     End Sub
 
 
@@ -248,7 +267,7 @@ Public Class Asset
                 Next
         End Select
     End Sub
-  
+
     Private Sub GenerateAssetCandles(assetID As String)
         Dim valuemembers(3) As String
         valuemembers(0) = "Low"
@@ -396,7 +415,7 @@ Public Class Asset
         TEBSTotal.EditValue = (TEBSQty.EditValue * TSBSPrice.EditValue) + TEBSTxFee.EditValue
 
     End Sub
- 
+
     Private Sub gridassetbuychange() Handles GridView3.RowClick, GridView3.RowCellClick
         TEBSQty.EditValue = CType(GridView3.GetFocusedDataRow(1), Int64)
         TSBSPrice.EditValue = CType(GridView3.GetFocusedDataRow(2), Decimal)
@@ -473,5 +492,63 @@ Public Class Asset
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs)
 
+    End Sub
+
+    Private Sub GetAssetAccounts_Click(sender As Object, e As EventArgs) Handles BtnGetAssetAccounts.Click
+        Dim assetaccounts As JObject = JObject.Parse(callAPI.getAssetAccounts(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), DPLUEAssetID.EditValue))
+        assetaccountsdt = New DataTable("assetAccounts")
+        With assetaccountsdt
+            .Columns.Add(New DataColumn("account", GetType(String)))
+            .Columns.Add(New DataColumn("accountRS", GetType(String)))
+            .Columns.Add(New DataColumn("unconfirmedQuantityQNT", GetType(String)))
+            .Columns.Add(New DataColumn("quantityQNT", GetType(String)))
+            .Columns.Add(New DataColumn("Include", GetType(Boolean)))
+            .Columns.Add(New DataColumn("percentOwned", GetType(Decimal)))
+            .Columns.Add(New DataColumn("DividendValue", GetType(Decimal)))
+
+        End With
+
+        For Each i In assetaccounts("accountAssets")
+
+            assetaccountsdt.Rows.Add(i("account"), i("accountRS"), i("unconfirmedQuantityQNT"), i("quantityQNT"), True, 0, 0)
+
+        Next
+        assetaccountsdt.AcceptChanges()
+        GridControl3.DataSource = assetaccountsdt
+
+
+
+    End Sub
+    Dim dividenddataset As DataTable
+
+    Private Sub BtnCalculateDiv_Click(sender As Object, e As EventArgs) Handles BtnCalculateDiv.Click
+        Try
+
+            dividenddataset = New DataTable("dividenddataset")
+            Dim totalAssetamount As Decimal = 0
+            Dim totalassetaccount As Int16 = 0
+            Dim dividendpayout As Decimal = CType(TEDivamount.EditValue, Decimal)
+
+            For Each i As DataRow In assetaccountsdt.Rows
+                If i("Include") Then
+                    totalAssetamount += i("quantityQNT")
+                    totalassetaccount += 1
+
+                End If
+            Next
+            For Each i As DataRow In assetaccountsdt.Rows
+                If i("Include") Then
+
+                    i("percentOwned") = i("quantityQNT") / totalAssetamount
+                    i("DividendValue") = i("percentOwned") * dividendpayout
+                Else
+                    i("percentOwned") = 0
+                    i("DividendValue") = 0
+                End If
+            Next
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
