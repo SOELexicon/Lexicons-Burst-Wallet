@@ -21,11 +21,11 @@ Partial Class Asset
     Private Sub InitializeComponent()
         Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
         Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView1 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
         Dim XyDiagram2 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
         Dim SecondaryAxisY1 As DevExpress.XtraCharts.SecondaryAxisY = New DevExpress.XtraCharts.SecondaryAxisY()
         Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
+        Dim SideBySideBarSeriesView2 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
         Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim CandleStickSeriesView1 As DevExpress.XtraCharts.CandleStickSeriesView = New DevExpress.XtraCharts.CandleStickSeriesView()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
@@ -119,7 +119,7 @@ Partial Class Asset
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.assetTransfersGC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.assetTransfersGridview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransferButtonEdit, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,7 +162,7 @@ Partial Class Asset
         CType(XyDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(SecondaryAxisY1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(CandleStickSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtAddAsset.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,10 +202,10 @@ Partial Class Asset
         '
         'GridControl1
         '
-        Me.GridControl1.Location = New System.Drawing.Point(31, 259)
+        Me.GridControl1.Location = New System.Drawing.Point(31, 258)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(224, 454)
+        Me.GridControl1.Size = New System.Drawing.Size(224, 455)
         Me.GridControl1.TabIndex = 0
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -250,10 +250,10 @@ Partial Class Asset
         '
         'GridControl4
         '
-        Me.GridControl4.Location = New System.Drawing.Point(31, 448)
+        Me.GridControl4.Location = New System.Drawing.Point(31, 447)
         Me.GridControl4.MainView = Me.GridView6
         Me.GridControl4.Name = "GridControl4"
-        Me.GridControl4.Size = New System.Drawing.Size(1226, 265)
+        Me.GridControl4.Size = New System.Drawing.Size(1226, 266)
         Me.GridControl4.TabIndex = 18
         Me.GridControl4.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView6})
         '
@@ -267,24 +267,25 @@ Partial Class Asset
         XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
         XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
         Me.ChartControl2.Diagram = XyDiagram1
-        Me.ChartControl2.Location = New System.Drawing.Point(31, 178)
+        Me.ChartControl2.Location = New System.Drawing.Point(31, 177)
         Me.ChartControl2.Name = "ChartControl2"
         Series1.ArgumentDataMember = "DateTime"
         Series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series1.Name = "Series 1"
         Series1.ValueDataMembersSerializable = "amountNQT"
-        Series1.View = LineSeriesView1
+        SideBySideBarSeriesView1.Color = System.Drawing.Color.Green
+        Series1.View = SideBySideBarSeriesView1
         Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
         Me.ChartControl2.Size = New System.Drawing.Size(1226, 264)
         Me.ChartControl2.TabIndex = 17
         '
         'assetTransfersGC
         '
-        Me.assetTransfersGC.Location = New System.Drawing.Point(46, 221)
+        Me.assetTransfersGC.Location = New System.Drawing.Point(46, 219)
         Me.assetTransfersGC.MainView = Me.assetTransfersGridview
         Me.assetTransfersGC.Name = "assetTransfersGC"
         Me.assetTransfersGC.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.TransferButtonEdit})
-        Me.assetTransfersGC.Size = New System.Drawing.Size(1196, 477)
+        Me.assetTransfersGC.Size = New System.Drawing.Size(1196, 479)
         Me.assetTransfersGC.TabIndex = 15
         Me.assetTransfersGC.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.assetTransfersGridview})
         '
@@ -303,10 +304,10 @@ Partial Class Asset
         '
         'GridControl3
         '
-        Me.GridControl3.Location = New System.Drawing.Point(46, 221)
+        Me.GridControl3.Location = New System.Drawing.Point(46, 219)
         Me.GridControl3.MainView = Me.GridView5
         Me.GridControl3.Name = "GridControl3"
-        Me.GridControl3.Size = New System.Drawing.Size(1196, 477)
+        Me.GridControl3.Size = New System.Drawing.Size(1196, 479)
         Me.GridControl3.TabIndex = 14
         Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView5})
         '
@@ -317,16 +318,16 @@ Partial Class Asset
         '
         'TEAssetAccountRS
         '
-        Me.TEAssetAccountRS.Location = New System.Drawing.Point(270, 246)
+        Me.TEAssetAccountRS.Location = New System.Drawing.Point(267, 245)
         Me.TEAssetAccountRS.Name = "TEAssetAccountRS"
         Me.TEAssetAccountRS.Properties.ReadOnly = True
-        Me.TEAssetAccountRS.Size = New System.Drawing.Size(987, 22)
+        Me.TEAssetAccountRS.Size = New System.Drawing.Size(990, 22)
         Me.TEAssetAccountRS.StyleController = Me.LayoutControl1
         Me.TEAssetAccountRS.TabIndex = 13
         '
         'TETradeCount
         '
-        Me.TETradeCount.Location = New System.Drawing.Point(1186, 198)
+        Me.TETradeCount.Location = New System.Drawing.Point(1186, 197)
         Me.TETradeCount.Name = "TETradeCount"
         Me.TETradeCount.Properties.ReadOnly = True
         Me.TETradeCount.Size = New System.Drawing.Size(71, 22)
@@ -335,7 +336,7 @@ Partial Class Asset
         '
         'TEAccountCount
         '
-        Me.TEAccountCount.Location = New System.Drawing.Point(1109, 198)
+        Me.TEAccountCount.Location = New System.Drawing.Point(1109, 197)
         Me.TEAccountCount.Name = "TEAccountCount"
         Me.TEAccountCount.Properties.ReadOnly = True
         Me.TEAccountCount.Size = New System.Drawing.Size(71, 22)
@@ -344,19 +345,19 @@ Partial Class Asset
         '
         'TEAssetName
         '
-        Me.TEAssetName.Location = New System.Drawing.Point(595, 198)
+        Me.TEAssetName.Location = New System.Drawing.Point(593, 197)
         Me.TEAssetName.Name = "TEAssetName"
         Me.TEAssetName.Properties.ReadOnly = True
-        Me.TEAssetName.Size = New System.Drawing.Size(508, 22)
+        Me.TEAssetName.Size = New System.Drawing.Size(510, 22)
         Me.TEAssetName.StyleController = Me.LayoutControl1
         Me.TEAssetName.TabIndex = 13
         '
         'TEAssetid
         '
-        Me.TEAssetid.Location = New System.Drawing.Point(270, 198)
+        Me.TEAssetid.Location = New System.Drawing.Point(267, 197)
         Me.TEAssetid.Name = "TEAssetid"
         Me.TEAssetid.Properties.ReadOnly = True
-        Me.TEAssetid.Size = New System.Drawing.Size(319, 22)
+        Me.TEAssetid.Size = New System.Drawing.Size(320, 22)
         Me.TEAssetid.StyleController = Me.LayoutControl1
         Me.TEAssetid.TabIndex = 13
         '
@@ -525,20 +526,20 @@ Partial Class Asset
         '
         'PopupContainerEdit1
         '
-        Me.PopupContainerEdit1.Location = New System.Drawing.Point(345, 474)
+        Me.PopupContainerEdit1.Location = New System.Drawing.Point(342, 470)
         Me.PopupContainerEdit1.Name = "PopupContainerEdit1"
         Me.PopupContainerEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.PopupContainerEdit1.Properties.PopupControl = Me.PopupContainerControl1
-        Me.PopupContainerEdit1.Size = New System.Drawing.Size(912, 22)
+        Me.PopupContainerEdit1.Size = New System.Drawing.Size(915, 22)
         Me.PopupContainerEdit1.StyleController = Me.LayoutControl1
         Me.PopupContainerEdit1.TabIndex = 11
         '
         'GridAssetSell
         '
-        Me.GridAssetSell.Location = New System.Drawing.Point(270, 523)
+        Me.GridAssetSell.Location = New System.Drawing.Point(267, 516)
         Me.GridAssetSell.MainView = Me.GridView4
         Me.GridAssetSell.Name = "GridAssetSell"
-        Me.GridAssetSell.Size = New System.Drawing.Size(488, 179)
+        Me.GridAssetSell.Size = New System.Drawing.Size(489, 186)
         Me.GridAssetSell.TabIndex = 10
         Me.GridAssetSell.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
         '
@@ -552,10 +553,10 @@ Partial Class Asset
         '
         'GridAssetBuy
         '
-        Me.GridAssetBuy.Location = New System.Drawing.Point(767, 523)
+        Me.GridAssetBuy.Location = New System.Drawing.Point(765, 516)
         Me.GridAssetBuy.MainView = Me.GridView3
         Me.GridAssetBuy.Name = "GridAssetBuy"
-        Me.GridAssetBuy.Size = New System.Drawing.Size(490, 179)
+        Me.GridAssetBuy.Size = New System.Drawing.Size(492, 186)
         Me.GridAssetBuy.TabIndex = 9
         Me.GridAssetBuy.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -695,15 +696,15 @@ Partial Class Asset
         SecondaryAxisY1.VisibleInPanesSerializable = "-1"
         XyDiagram2.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SecondaryAxisY() {SecondaryAxisY1})
         Me.ChartControl1.Diagram = XyDiagram2
-        Me.ChartControl1.Location = New System.Drawing.Point(270, 274)
+        Me.ChartControl1.Location = New System.Drawing.Point(267, 273)
         Me.ChartControl1.Name = "ChartControl1"
         Me.ChartControl1.PaletteBaseColorNumber = 1
         Series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series2.Name = "Volume"
         Series2.ValueDataMembersSerializable = "Volume"
-        SideBySideBarSeriesView1.AxisYName = "Secondary AxisY 1"
-        SideBySideBarSeriesView1.Transparency = CType(100, Byte)
-        Series2.View = SideBySideBarSeriesView1
+        SideBySideBarSeriesView2.AxisYName = "Secondary AxisY 1"
+        SideBySideBarSeriesView2.Transparency = CType(100, Byte)
+        Series2.View = SideBySideBarSeriesView2
         Series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
         Series3.Name = "Price"
         Series3.ValueDataMembersSerializable = "Low;High;Open;Close"
@@ -711,12 +712,12 @@ Partial Class Asset
         CandleStickSeriesView1.ReductionOptions.Color = System.Drawing.Color.DarkRed
         Series3.View = CandleStickSeriesView1
         Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2, Series3}
-        Me.ChartControl1.Size = New System.Drawing.Size(987, 185)
+        Me.ChartControl1.Size = New System.Drawing.Size(990, 185)
         Me.ChartControl1.TabIndex = 6
         '
         'TxtAddAsset
         '
-        Me.TxtAddAsset.Location = New System.Drawing.Point(31, 198)
+        Me.TxtAddAsset.Location = New System.Drawing.Point(31, 197)
         Me.TxtAddAsset.Name = "TxtAddAsset"
         Me.TxtAddAsset.Size = New System.Drawing.Size(224, 22)
         Me.TxtAddAsset.StyleController = Me.LayoutControl1
@@ -724,7 +725,7 @@ Partial Class Asset
         '
         'SimpleButton1
         '
-        Me.SimpleButton1.Location = New System.Drawing.Point(31, 226)
+        Me.SimpleButton1.Location = New System.Drawing.Point(31, 225)
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(224, 27)
         Me.SimpleButton1.StyleController = Me.LayoutControl1
@@ -777,7 +778,7 @@ Partial Class Asset
         Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup6.Size = New System.Drawing.Size(1232, 541)
+        Me.LayoutControlGroup6.Size = New System.Drawing.Size(1232, 542)
         Me.LayoutControlGroup6.Text = "Transactions"
         '
         'LayoutControlItem23
@@ -794,7 +795,7 @@ Partial Class Asset
         Me.LayoutControlItem24.Control = Me.GridControl4
         Me.LayoutControlItem24.Location = New System.Drawing.Point(0, 270)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
-        Me.LayoutControlItem24.Size = New System.Drawing.Size(1232, 271)
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(1232, 272)
         Me.LayoutControlItem24.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem24.TextVisible = False
         '
@@ -804,7 +805,7 @@ Partial Class Asset
         Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
         Me.LayoutControlGroup2.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1232, 541)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(1232, 542)
         Me.LayoutControlGroup2.Text = "Asset"
         '
         'LayoutControlItem3
@@ -831,7 +832,7 @@ Partial Class Asset
         Me.LayoutControlItem1.Control = Me.GridControl1
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 81)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(230, 460)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(230, 461)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
@@ -840,87 +841,87 @@ Partial Class Asset
         Me.SplitterItem2.AllowHotTrack = True
         Me.SplitterItem2.Location = New System.Drawing.Point(230, 0)
         Me.SplitterItem2.Name = "SplitterItem2"
-        Me.SplitterItem2.Size = New System.Drawing.Size(9, 541)
+        Me.SplitterItem2.Size = New System.Drawing.Size(6, 542)
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.ChartControl1
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(239, 96)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(236, 96)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(993, 191)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(996, 191)
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
         'SplitterItem1
         '
         Me.SplitterItem1.AllowHotTrack = True
-        Me.SplitterItem1.Location = New System.Drawing.Point(239, 287)
+        Me.SplitterItem1.Location = New System.Drawing.Point(236, 287)
         Me.SplitterItem1.Name = "SplitterItem1"
-        Me.SplitterItem1.Size = New System.Drawing.Size(993, 9)
+        Me.SplitterItem1.Size = New System.Drawing.Size(996, 6)
         '
         'SplitterItem3
         '
         Me.SplitterItem3.AllowHotTrack = True
-        Me.SplitterItem3.Location = New System.Drawing.Point(239, 336)
+        Me.SplitterItem3.Location = New System.Drawing.Point(236, 333)
         Me.SplitterItem3.Name = "SplitterItem3"
-        Me.SplitterItem3.Size = New System.Drawing.Size(993, 9)
+        Me.SplitterItem3.Size = New System.Drawing.Size(996, 6)
         '
         'EmptySpaceItem1
         '
         Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(239, 530)
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(236, 531)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(993, 11)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(996, 11)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(239, 324)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(236, 321)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(993, 12)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(996, 12)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlItem6
         '
         Me.LayoutControlItem6.Control = Me.PopupContainerEdit1
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(239, 296)
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(236, 293)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(993, 28)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(996, 28)
         Me.LayoutControlItem6.Text = "Buy/Sell"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(71, 16)
         '
         'LayoutControlItem9
         '
         Me.LayoutControlItem9.Control = Me.GridAssetBuy
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(736, 345)
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(734, 339)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(496, 185)
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(498, 192)
         Me.LayoutControlItem9.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem9.TextVisible = False
         '
         'LayoutControlItem10
         '
         Me.LayoutControlItem10.Control = Me.GridAssetSell
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(239, 345)
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(236, 339)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(494, 185)
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(495, 192)
         Me.LayoutControlItem10.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem10.TextVisible = False
         '
         'SimpleSeparator1
         '
         Me.SimpleSeparator1.AllowHotTrack = False
-        Me.SimpleSeparator1.Location = New System.Drawing.Point(733, 345)
+        Me.SimpleSeparator1.Location = New System.Drawing.Point(731, 339)
         Me.SimpleSeparator1.Name = "SimpleSeparator1"
-        Me.SimpleSeparator1.Size = New System.Drawing.Size(3, 185)
+        Me.SimpleSeparator1.Size = New System.Drawing.Size(3, 192)
         '
         'LayoutControlItem17
         '
         Me.LayoutControlItem17.Control = Me.TEAssetid
-        Me.LayoutControlItem17.Location = New System.Drawing.Point(239, 0)
+        Me.LayoutControlItem17.Location = New System.Drawing.Point(236, 0)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(325, 48)
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(326, 48)
         Me.LayoutControlItem17.Text = "Asset Id"
         Me.LayoutControlItem17.TextLocation = DevExpress.Utils.Locations.Top
         Me.LayoutControlItem17.TextSize = New System.Drawing.Size(71, 16)
@@ -928,9 +929,9 @@ Partial Class Asset
         'LayoutControlItem16
         '
         Me.LayoutControlItem16.Control = Me.TEAssetName
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(564, 0)
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(562, 0)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(514, 48)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(516, 48)
         Me.LayoutControlItem16.Text = "Name"
         Me.LayoutControlItem16.TextLocation = DevExpress.Utils.Locations.Top
         Me.LayoutControlItem16.TextSize = New System.Drawing.Size(71, 16)
@@ -964,9 +965,9 @@ Partial Class Asset
         'LayoutControlItem20
         '
         Me.LayoutControlItem20.Control = Me.TEAssetAccountRS
-        Me.LayoutControlItem20.Location = New System.Drawing.Point(239, 48)
+        Me.LayoutControlItem20.Location = New System.Drawing.Point(236, 48)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(993, 48)
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(996, 48)
         Me.LayoutControlItem20.Text = "Asset Issuer"
         Me.LayoutControlItem20.TextLocation = DevExpress.Utils.Locations.Top
         Me.LayoutControlItem20.TextSize = New System.Drawing.Size(71, 16)
@@ -977,7 +978,7 @@ Partial Class Asset
         Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
         Me.LayoutControlGroup3.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(1232, 541)
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(1232, 542)
         Me.LayoutControlGroup3.Text = "Asset Management"
         '
         'TabbedControlGroup2
@@ -986,7 +987,7 @@ Partial Class Asset
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
         Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
         Me.TabbedControlGroup2.SelectedTabPageIndex = 1
-        Me.TabbedControlGroup2.Size = New System.Drawing.Size(1232, 541)
+        Me.TabbedControlGroup2.Size = New System.Drawing.Size(1232, 542)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
         '
         'LayoutControlGroup7
@@ -995,7 +996,7 @@ Partial Class Asset
         Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
         Me.LayoutControlGroup7.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(1202, 485)
         Me.LayoutControlGroup7.Text = "Transfer Assets"
         '
         'LayoutControlItem22
@@ -1003,7 +1004,7 @@ Partial Class Asset
         Me.LayoutControlItem22.Control = Me.assetTransfersGC
         Me.LayoutControlItem22.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem22.Name = "LayoutControlItem22"
-        Me.LayoutControlItem22.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(1202, 485)
         Me.LayoutControlItem22.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem22.TextVisible = False
         '
@@ -1013,7 +1014,7 @@ Partial Class Asset
         Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
         Me.LayoutControlGroup5.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(1202, 485)
         Me.LayoutControlGroup5.Text = "Dividend Payout"
         '
         'LayoutControlItem21
@@ -1021,7 +1022,7 @@ Partial Class Asset
         Me.LayoutControlItem21.Control = Me.GridControl3
         Me.LayoutControlItem21.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem21.Name = "LayoutControlItem21"
-        Me.LayoutControlItem21.Size = New System.Drawing.Size(1202, 483)
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(1202, 485)
         Me.LayoutControlItem21.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem21.TextVisible = False
         '
@@ -1040,7 +1041,7 @@ Partial Class Asset
         CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.assetTransfersGC, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1084,7 +1085,7 @@ Partial Class Asset
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(SecondaryAxisY1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(XyDiagram2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(CandleStickSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()

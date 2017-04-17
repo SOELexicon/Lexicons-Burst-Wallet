@@ -15,6 +15,7 @@ Public Class Asset
     Public BurstPublicKey As String
 
     Dim xmlDataSet As System.Data.DataSet
+    Dim assetinview, assetbuys, assetSells, assetsowned, transactionstable, transactionschart As DataTable
 
     Private Sub Asset_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SplashScreenManager.Default.SetWaitFormCaption("Loading Local Asset DB")
@@ -104,6 +105,11 @@ Public Class Asset
 
         Dim jsonTransactions As JObject = JObject.Parse(callAPI.getAccountTransactions(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), BurstID, "0"))
         Dim balance As Decimal = TEBalance.Text
+        transactionschart = New DataTable("Transactions")
+        With transactionschart
+            .Columns.Add(New DataColumn("DateTime", GetType(DateTime)))
+            .Columns.Add(New DataColumn("amountNQT", GetType(Decimal)))
+        End With
 
         If jsonTransactions("transactions").Count > 0 Then
             For i As Integer = 0 To jsonTransactions("transactions").Count - 1
@@ -113,8 +119,9 @@ Public Class Asset
                     Dim sendreceive As String = "Receive"
                     Dim recipientRS As String = .SelectToken("recipientRS")
                     Dim ammount As Decimal = CType(.SelectToken("amountNQT"), Int64) / 100000000
+
                     Dim transactiondatetim As DateTime = burstEpoch.AddSeconds(CType(.SelectToken("timestamp"), Int64)).ToShortDateString
-                 
+                   
                     If senderrs = BurstRS Then
                         sendreceive = "Sent"
                         transactionstable.Rows.Add(transactiondatetim, senderrs, recipientRS, sendreceive, -ammount, fee)
@@ -126,12 +133,41 @@ Public Class Asset
 
 
                 End With
-
+           
 
             Next
             transactionstable.AcceptChanges()
+            Dim chartbalance As Decimal = 0
+            Dim chartdate As DateTime
+
+
+            For i As Integer = 0 To transactionstable.Rows.Count - 1
+                If i = 0 Then
+                    chartdate = transactionstable.Rows(i)(0)
+                    chartbalance = transactionstable.Rows(i)(4)
+
+                Else
+                    If chartdate <> transactionstable.Rows(i)(0) Then
+                        transactionschart.Rows.Add(transactionstable.Rows(i - 1)(0), chartbalance)
+                        chartdate = transactionstable.Rows(i)(0)
+                        chartbalance = transactionstable.Rows(i)(4)
+                    Else
+                        chartbalance += transactionstable.Rows(i)(4)
+                        If i = transactionstable.Rows.Count - 1 Then
+
+                            transactionschart.Rows.Add(transactionstable.Rows(i)(0), chartbalance)
+                            chartbalance = 0
+                        End If
+
+                    End If
+                End If
+
+
+            Next
+            transactionschart.AcceptChanges()
+
             ' GridControl2.DataSource = assetinview
-            ChartControl2.DataSource = transactionstable
+            ChartControl2.DataSource = transactionschart
             'ChartControl1.Series.Clear()
             GridControl4.DataSource = transactionstable
 
@@ -164,11 +200,7 @@ Public Class Asset
    
     End Sub
 
-    Dim assetinview As DataTable
-    Dim assetbuys As DataTable
-    Dim assetSells As DataTable
-    Dim assetsowned As DataTable
-    Dim transactionstable As DataTable
+
 
     Dim address As String
 
