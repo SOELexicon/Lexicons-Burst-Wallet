@@ -62,10 +62,82 @@ Public Class Asset
         TEAccountID.Text = BurstID
         TEAccountRS.Text = BurstRS
         SplashScreenManager.Default.SetWaitFormCaption("Invoking getAccountAPI Call")
-
+        assetsowned = New DataTable("AssetsOwned")
+        With assetsowned
+            .Columns.Add(New DataColumn("AssetID", GetType(String)))
+            .Columns.Add(New DataColumn("Name", GetType(String)))
+            .Columns.Add(New DataColumn("Decimals", GetType(Integer)))
+            .Columns.Add(New DataColumn("amountNQT", GetType(Decimal)))
+        End With
+        transactionstable = New DataTable("Transactions")
+        With transactionstable
+            .Columns.Add(New DataColumn("DateTime", GetType(DateTime)))
+            .Columns.Add(New DataColumn("senderRS", GetType(String)))
+            .Columns.Add(New DataColumn("recipientRS", GetType(String)))
+            .Columns.Add(New DataColumn("Sent/Receive", GetType(String)))
+            .Columns.Add(New DataColumn("amountNQT", GetType(Integer)))
+            .Columns.Add(New DataColumn("feeNQT", GetType(Decimal)))
+        End With
         Dim json As JObject = JObject.Parse(callAPI.getAccount(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), BurstID))
         TEName.Text = json.SelectToken("name").ToString()
         TEBalance.Text = (Int64.Parse(json.SelectToken("effectiveBalanceNXT").ToString()) / 100000000)
+        SplashScreenManager.Default.SetWaitFormCaption("Fetching Asset Balance's")
+
+        If json.SelectToken("assetBalances").Count > 0 Then
+            For i As Integer = 0 To json.SelectToken("assetBalances").Count - 1
+                Dim balanceasset As Decimal = CType(json("assetBalances")(i)("balanceQNT"), Decimal)
+                Dim asset As String = CType(json("assetBalances")(i)("asset"), String)
+
+                Dim jsonAssetInfo As JObject = JObject.Parse(callAPI.getAsset(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), asset))
+                Dim assetname As String = jsonAssetInfo("name")
+                Dim assetdecimals As Integer = jsonAssetInfo("decimals")
+
+                assetsowned.Rows.Add(asset, assetname, assetdecimals, balanceasset / Math.Pow(10, assetdecimals))
+
+            Next
+            assetsowned.AcceptChanges()
+
+        End If
+        assetTransfersGC.DataSource = assetsowned
+        ' assetTransfersGC.DataSource
+        SplashScreenManager.Default.SetWaitFormCaption("Fetching Transaction's")
+
+        Dim jsonTransactions As JObject = JObject.Parse(callAPI.getAccountTransactions(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), BurstID, "0"))
+        Dim balance As Decimal = TEBalance.Text
+
+        If jsonTransactions("transactions").Count > 0 Then
+            For i As Integer = 0 To jsonTransactions("transactions").Count - 1
+                With jsonTransactions("transactions")(i)
+                    Dim fee As Int16 = CType(.SelectToken("feeNQT"), Int64) / 100000000
+                    Dim senderrs As String = .SelectToken("senderRS")
+                    Dim sendreceive As String = "Receive"
+                    Dim recipientRS As String = .SelectToken("recipientRS")
+                    Dim ammount As Decimal = CType(.SelectToken("amountNQT"), Int64) / 100000000
+                    Dim transactiondatetim As DateTime = burstEpoch.AddSeconds(CType(.SelectToken("timestamp"), Int64)).ToShortDateString
+                 
+                    If senderrs = BurstRS Then
+                        sendreceive = "Sent"
+                        transactionstable.Rows.Add(transactiondatetim, senderrs, recipientRS, sendreceive, -ammount, fee)
+
+                    Else
+                        transactionstable.Rows.Add(transactiondatetim, senderrs, recipientRS, sendreceive, ammount, fee)
+
+                    End If
+
+
+                End With
+
+
+            Next
+            transactionstable.AcceptChanges()
+            ' GridControl2.DataSource = assetinview
+            ChartControl2.DataSource = transactionstable
+            'ChartControl1.Series.Clear()
+            GridControl4.DataSource = transactionstable
+
+
+        End If
+
         Try
             DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm()
         Catch ex As Exception
@@ -95,6 +167,9 @@ Public Class Asset
     Dim assetinview As DataTable
     Dim assetbuys As DataTable
     Dim assetSells As DataTable
+    Dim assetsowned As DataTable
+    Dim transactionstable As DataTable
+
     Dim address As String
 
     Private Sub updateAssetTable(timestamp As Date, value As Decimal, position As String)
@@ -311,7 +386,7 @@ Public Class Asset
             wallet.Dispose()
 
             Try
-                Dim buyJson As JObject = JObject.Parse(callAPI.placeBidOrder(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), TEAssetid.Text, (TEBSQty.EditValue * Math.Pow(10, Results(0))), TSBSPrice.EditValue / Math.Pow(10, Results(0)), passphrase, TEBSTxFee.Text).ToString)
+                Dim buyJson As JObject = JObject.Parse(callAPI.placeBidOrder(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), TEAssetid.Text, (TEBSQty.EditValue * Math.Pow(10, Results(0))), TSBSPrice.EditValue * Math.Pow(10, Results(0)), passphrase, TEBSTxFee.Text).ToString)
 
                 If (CType(buyJson("broadcasted"), String) = "True") Then
                     MsgBox("Transaction Broadcasted" & Environment.NewLine & _
