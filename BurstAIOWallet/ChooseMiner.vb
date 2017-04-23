@@ -149,7 +149,7 @@ Public Class ChooseMiner
             End If
 
         Catch ex As Exception
-            MsgBox(ex)
+            'MsgBox(ex)
         End Try
     End Sub
     Private Sub LookUpEdit1_EditValueChanged(sender As Object, e As EventArgs) Handles LookUpEdit1.EditValueChanged

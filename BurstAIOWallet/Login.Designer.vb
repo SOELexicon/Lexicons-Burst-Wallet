@@ -21,42 +21,66 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
+        Me.BtnGetExisting = New DevExpress.XtraEditors.SimpleButton()
         Me.BtnGeneratePass = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.BtnGetExisting = New DevExpress.XtraEditors.SimpleButton()
         Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
         '
+        Me.LayoutControl1.Controls.Add(Me.TextEdit1)
         Me.LayoutControl1.Controls.Add(Me.BtnGetExisting)
         Me.LayoutControl1.Controls.Add(Me.BtnGeneratePass)
         Me.LayoutControl1.Controls.Add(Me.SimpleButton1)
         Me.LayoutControl1.Controls.Add(Me.TextBox1)
         Me.LayoutControl1.Controls.Add(Me.PictureEdit1)
         Me.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LayoutControl1.HiddenItems.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
         Me.LayoutControl1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
         Me.LayoutControl1.Size = New System.Drawing.Size(768, 350)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
+        '
+        'TextEdit1
+        '
+        Me.TextEdit1.Location = New System.Drawing.Point(16, 246)
+        Me.TextEdit1.Name = "TextEdit1"
+        Me.TextEdit1.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextEdit1.Size = New System.Drawing.Size(736, 22)
+        Me.TextEdit1.StyleController = Me.LayoutControl1
+        Me.TextEdit1.TabIndex = 10
+        '
+        'BtnGetExisting
+        '
+        Me.BtnGetExisting.Location = New System.Drawing.Point(387, 307)
+        Me.BtnGetExisting.Name = "BtnGetExisting"
+        Me.BtnGetExisting.Size = New System.Drawing.Size(365, 27)
+        Me.BtnGetExisting.StyleController = Me.LayoutControl1
+        Me.BtnGetExisting.TabIndex = 9
+        Me.BtnGetExisting.Text = "Retrieve From Password Manager"
         '
         'BtnGeneratePass
         '
@@ -78,7 +102,7 @@ Partial Class Login
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(16, 243)
+        Me.TextBox1.Location = New System.Drawing.Point(16, 195)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(736, 25)
@@ -90,15 +114,25 @@ Partial Class Login
         Me.PictureEdit1.Location = New System.Drawing.Point(16, 16)
         Me.PictureEdit1.Name = "PictureEdit1"
         Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.PictureEdit1.Size = New System.Drawing.Size(736, 201)
+        Me.PictureEdit1.Size = New System.Drawing.Size(736, 204)
         Me.PictureEdit1.StyleController = Me.LayoutControl1
         Me.PictureEdit1.TabIndex = 5
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.TextBox1
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 159)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(742, 51)
+        Me.LayoutControlItem1.Text = "Passphrase"
+        Me.LayoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(65, 16)
         '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2, Me.LayoutControlItem1, Me.LayoutControlItem3, Me.LayoutControlItem5, Me.LayoutControlItem4})
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem5, Me.LayoutControlItem4, Me.LayoutControlItem6})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
         Me.LayoutControlGroup1.OptionsItemText.TextToControlDistance = 4
@@ -110,19 +144,9 @@ Partial Class Login
         Me.LayoutControlItem2.Control = Me.PictureEdit1
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(742, 207)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(742, 210)
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem2.TextVisible = False
-        '
-        'LayoutControlItem1
-        '
-        Me.LayoutControlItem1.Control = Me.TextBox1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 207)
-        Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(742, 51)
-        Me.LayoutControlItem1.Text = "Passphrase"
-        Me.LayoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(65, 16)
         '
         'LayoutControlItem3
         '
@@ -133,6 +157,15 @@ Partial Class Login
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem3.TextVisible = False
         '
+        'LayoutControlItem5
+        '
+        Me.LayoutControlItem5.Control = Me.BtnGetExisting
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(371, 291)
+        Me.LayoutControlItem5.Name = "LayoutControlItem5"
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(371, 33)
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem5.TextVisible = False
+        '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.BtnGeneratePass
@@ -142,23 +175,15 @@ Partial Class Login
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem4.TextVisible = False
         '
-        'BtnGetExisting
+        'LayoutControlItem6
         '
-        Me.BtnGetExisting.Location = New System.Drawing.Point(387, 307)
-        Me.BtnGetExisting.Name = "BtnGetExisting"
-        Me.BtnGetExisting.Size = New System.Drawing.Size(365, 27)
-        Me.BtnGetExisting.StyleController = Me.LayoutControl1
-        Me.BtnGetExisting.TabIndex = 9
-        Me.BtnGetExisting.Text = "Retrieve From Password Manager"
-        '
-        'LayoutControlItem5
-        '
-        Me.LayoutControlItem5.Control = Me.BtnGetExisting
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(371, 291)
-        Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(371, 33)
-        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem5.TextVisible = False
+        Me.LayoutControlItem6.Control = Me.TextEdit1
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 210)
+        Me.LayoutControlItem6.Name = "LayoutControlItem6"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(742, 48)
+        Me.LayoutControlItem6.Text = "Passphrase"
+        Me.LayoutControlItem6.TextLocation = DevExpress.Utils.Locations.Top
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(65, 16)
         '
         'Login
         '
@@ -171,13 +196,15 @@ Partial Class Login
         Me.Text = "Login"
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -193,4 +220,6 @@ Partial Class Login
     Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents BtnGetExisting As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LayoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents TextEdit1 As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
 End Class

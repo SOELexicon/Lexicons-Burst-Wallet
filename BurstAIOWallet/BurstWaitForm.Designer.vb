@@ -40,7 +40,7 @@ Partial Class BurstWaitForm
         Me.progressPanel1.Location = New System.Drawing.Point(0, 21)
         Me.progressPanel1.Margin = New System.Windows.Forms.Padding(0, 4, 0, 4)
         Me.progressPanel1.Name = "progressPanel1"
-        Me.progressPanel1.Size = New System.Drawing.Size(448, 48)
+        Me.progressPanel1.Size = New System.Drawing.Size(615, 48)
         Me.progressPanel1.TabIndex = 0
         Me.progressPanel1.Text = "progressPanel1"
         '
@@ -54,12 +54,12 @@ Partial Class BurstWaitForm
         Me.tableLayoutPanel1.Controls.Add(Me.progressPanel1, 0, 0)
         Me.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.tableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.tableLayoutPanel1.Name = "tableLayoutPanel1"
         Me.tableLayoutPanel1.Padding = New System.Windows.Forms.Padding(0, 17, 0, 17)
         Me.tableLayoutPanel1.RowCount = 1
         Me.tableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tableLayoutPanel1.Size = New System.Drawing.Size(448, 90)
+        Me.tableLayoutPanel1.Size = New System.Drawing.Size(615, 90)
         Me.tableLayoutPanel1.TabIndex = 1
         '
         'BurstWaitForm
@@ -68,10 +68,10 @@ Partial Class BurstWaitForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(448, 90)
+        Me.ClientSize = New System.Drawing.Size(615, 90)
         Me.Controls.Add(Me.tableLayoutPanel1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "BurstWaitForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Form1"

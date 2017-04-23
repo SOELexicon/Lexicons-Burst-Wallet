@@ -66,10 +66,17 @@ Partial Class BurstWallet
         Me.NavBarItem1 = New DevExpress.XtraNavBar.NavBarItem()
         Me.ClipboardClearTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.BarEditItem1 = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
+        Me.ProgressBar = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemProgressBar1 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
+        Me.ProgressCaption = New DevExpress.XtraBars.BarStaticItem()
         CType(Me.TabFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabFormDefaultManager1
@@ -282,9 +289,10 @@ Partial Class BurstWallet
         Me.BarManager1.DockControls.Add(Me.BarDockControl3)
         Me.BarManager1.DockControls.Add(Me.BarDockControl4)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.SkinBarSubItem1, Me.BarSubItem1, Me.BarButtonItem1})
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.SkinBarSubItem1, Me.BarSubItem1, Me.BarButtonItem1, Me.BarEditItem1, Me.ProgressBar, Me.ProgressCaption})
         Me.BarManager1.MainMenu = Me.Bar2
-        Me.BarManager1.MaxItemId = 3
+        Me.BarManager1.MaxItemId = 7
+        Me.BarManager1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemProgressBar1})
         Me.BarManager1.StatusBar = Me.Bar3
         '
         'Bar2
@@ -376,6 +384,35 @@ Partial Class BurstWallet
         'Timer1
         '
         '
+        'BarEditItem1
+        '
+        Me.BarEditItem1.Caption = "BarEditItem1"
+        Me.BarEditItem1.Edit = Me.RepositoryItemTextEdit1
+        Me.BarEditItem1.Id = 4
+        Me.BarEditItem1.Name = "BarEditItem1"
+        '
+        'RepositoryItemTextEdit1
+        '
+        Me.RepositoryItemTextEdit1.AutoHeight = False
+        Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
+        '
+        'ProgressBar
+        '
+        Me.ProgressBar.Edit = Me.RepositoryItemProgressBar1
+        Me.ProgressBar.Id = 5
+        Me.ProgressBar.Name = "ProgressBar"
+        '
+        'RepositoryItemProgressBar1
+        '
+        Me.RepositoryItemProgressBar1.Name = "RepositoryItemProgressBar1"
+        Me.RepositoryItemProgressBar1.ShowTitle = True
+        '
+        'ProgressCaption
+        '
+        Me.ProgressCaption.Id = 6
+        Me.ProgressCaption.Name = "ProgressCaption"
+        Me.ProgressCaption.TextAlignment = System.Drawing.StringAlignment.Near
+        '
         'BurstWallet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -399,6 +436,8 @@ Partial Class BurstWallet
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -448,4 +487,9 @@ Partial Class BurstWallet
     Friend WithEvents NBIBlockExplorer As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NBILotto As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents ProgressBar As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemProgressBar1 As DevExpress.XtraEditors.Repository.RepositoryItemProgressBar
+    Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+    Friend WithEvents ProgressCaption As DevExpress.XtraBars.BarStaticItem
 End Class

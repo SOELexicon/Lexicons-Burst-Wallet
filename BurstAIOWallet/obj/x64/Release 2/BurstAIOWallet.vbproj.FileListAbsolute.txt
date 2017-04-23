@@ -427,3 +427,11 @@ C:\LexWallet\BurstAIOWallet\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.vbpr
 C:\LexWallet\BurstAIOWallet\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.exe.licenses
 C:\LexWallet\BurstAIOWallet\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.exe.manifest
 C:\LexWallet\BurstAIOWallet\BurstAIOWallet\obj\x64\Release 2\BurstAIOWallet.application
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\DevExpress.XtraCharts.v15.2.UI.dll
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\DevExpress.XtraCharts.v15.2.Wizard.dll
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\DevExpress.XtraCharts.v15.2.UI.xml
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\DevExpress.XtraCharts.v15.2.Wizard.xml
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\de\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\es\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\ja\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
+C:\LexWallet\BurstAIOWallet\BurstAIOWallet\bin\x64\Release 2\ru\DevExpress.XtraCharts.v15.2.Wizard.resources.dll

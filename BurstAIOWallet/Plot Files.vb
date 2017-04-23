@@ -20,7 +20,7 @@ Public Class Plot_Files
     Dim highestStagger As Integer = 0
     Dim syncStagger As Integer = 0
     Dim safeMemStagger As Integer
-    Dim HighestPlottedStartNonce As Integer = 0
+    Dim HighestPlottedStartNonce As Int64 = 0
     Dim Nonces_Per_Gigabyte As Double = 4096
     Dim plots As Double = 1
     Dim gigabyteInput As Double = 0
@@ -77,6 +77,7 @@ Public Class Plot_Files
     Private Sub Plot_Files_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LayoutControlItem9.Enabled = False
         Plots_Input.Properties.Minimum = 1
+        Plots_Input.Properties.Maximum = 20
 
         LayoutControlItem1.Text = "Threads: 1"
         TrackBarControl1.Properties.Maximum = LogicalProcessorCount()
@@ -364,8 +365,8 @@ Public Class Plot_Files
         Try
             For i As Integer = 0 To drives.Length - 1
                 If drives(i).DriveType.ToString() <> "CDRom" OrElse drives(i).DriveType.ToString() <> "Unknown" Then
-                    If Directory.Exists(drives(i).ToString() + BurstPath) Then
-                        PlottedDir.Add(drives(i).ToString() + BurstPath)
+                    If Directory.Exists(drives(i).ToString + BurstPath) Then
+                        PlottedDir.Add(drives(i).ToString + BurstPath)
                     End If
                 End If
             Next
@@ -373,14 +374,12 @@ Public Class Plot_Files
             For i As Integer = 0 To PlottedDir.Count - 1
                 Dim dirPlots As String() = Directory.GetFiles(PlottedDir(i))
                 UsedPlotsNames.AddRange(dirPlots)
-                UsedAccountNames.AddRange(dirPlots)
             Next
             File.WriteAllLines(currentDirectory + "/logPlots.txt", UsedPlotsNames)
             For i As Integer = 0 To UsedPlotsNames.Count - 1
                 Dim workingString As String = UsedPlotsNames(i)
-                UsedAccountNames(i) = workingString.Substring(workingString.IndexOf("plots/") + 6)
-                UsedAccountNames(i) = UsedAccountNames(i).Substring(0, UsedAccountNames(i).IndexOf("_"))
                 workingString = workingString.Substring(workingString.IndexOf("_") + 1)
+                'label2.Text = workingString;
                 workingString = workingString.Substring(0, workingString.LastIndexOf("_"))
                 UsedPlotsNames(i) = workingString
             Next
@@ -389,17 +388,18 @@ Public Class Plot_Files
                 Dim stringCore As String = UsedPlotsNames(i)
                 Dim workingString As String() = stringCore.Split("_"c)
                 UsedPlotsStartNonce.Add(workingString(0))
+
                 UsedPlotsNonces.Add(workingString(1))
             Next
-            'File.WriteAllLines(currentDirectory + "/logPlotsStartNonces.txt", UsedPlotsStartNonce);
+            ' File.WriteAllLines(currentDirectory + "/logPlotsStartNonces.txt", UsedPlotsStartNonce);
             'File.WriteAllLines(currentDirectory + "/logPlotsNonces.txt", UsedPlotsNonces);
             For i As Integer = 0 To UsedPlotsStartNonce.Count - 1
-                If Integer.Parse(UsedPlotsStartNonce(i)) > HighestPlottedStartNonce Then
-                    HighestPlottedStartNonce = Integer.Parse(UsedPlotsStartNonce(i))
+                If Int64.Parse(UsedPlotsStartNonce(i)) > HighestPlottedStartNonce Then
+                    Dim workingInt As Int64 = Int64.Parse(UsedPlotsStartNonce(i))
+                    HighestPlottedStartNonce = workingInt
+                    currentNonce = (HighestPlottedStartNonce + Int64.Parse(UsedPlotsNonces(i)) + 1)
                 End If
-
-                currentNonce = (HighestPlottedStartNonce + Integer.Parse(UsedPlotsNonces(i)) + 1)
-
+                'MessageBox.Show(HighestPlottedStartNonce.ToString() + " / " + Int64.Parse(UsedPlotsNonces[i]) + 1 + " = " + currentNonce);
                 Start_Nonce = currentNonce
                 'MessageBox.Show(currentNonce.ToString());
             Next
@@ -407,6 +407,8 @@ Public Class Plot_Files
             MessageBox.Show("Couldnt gather start nonce data! " + ex.ToString())
         End Try
     End Sub
+
+
 
     Dim threadsxplotter As Integer
 

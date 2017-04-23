@@ -27,10 +27,13 @@ Public Class Login
     End Sub
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
-        BurstWallet.showassetform(TextBox1.Text)
-        Me.TextBox1.Clear()
-        Application.DoEvents()
         Me.Hide()
+        BurstWallet.showassetform(TextEdit1.EditValue)
+        Me.TextEdit1.Text = ""
+
+        'Clipboard.SetText(TextEdit1.EditValue)
+
+        Application.DoEvents()
     End Sub
 
     Public Sub SavenewPasswordPrompt(passphrase As String)
@@ -44,7 +47,7 @@ Public Class Login
         Else
             callAPI.SaveNewPassword(walletname, passphrase, walletencryptioncode)
         End If
-        Me.TextBox1.Text = passphrase
+        Me.TextEdit1.EditValue = passphrase
     End Sub
     Private Sub BtnGetExisting_Click(sender As Object, e As EventArgs) Handles BtnGetExisting.Click
 
@@ -53,11 +56,15 @@ Public Class Login
         Dim walletDiagResult As DialogResult
         walletDiagResult = wallet.ShowDialog()
         If walletDiagResult = System.Windows.Forms.DialogResult.OK Then
-            TextBox1.Text = wallet.MyTextValue
+            TextEdit1.EditValue = wallet.MyTextValue
             wallet.Dispose()
 
         Else
             '...
         End If
+    End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

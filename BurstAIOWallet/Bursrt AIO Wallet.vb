@@ -153,7 +153,7 @@ Public Class BurstWallet
 
 
             If currentVersion <> user.TagName Then
-                Dim result As Integer = MessageBox.Show("New Release Visit Site? " + Environment.NewLine + user.Body, "New Release: " + user.TagName, MessageBoxButtons.YesNoCancel)
+                Dim result As Integer = DevExpress.XtraEditors.XtraMessageBox.Show(Me, "New Release Visit Site? " + Environment.NewLine + user.Body, "New Release: " + user.TagName, MessageBoxButtons.YesNoCancel)
                 If result = DialogResult.Cancel Then
 
                 ElseIf result = DialogResult.No Then
@@ -193,7 +193,7 @@ Public Class BurstWallet
         Dim wallet As String = fastestwallet.Replace("/burst?requestType=getMiningInfo", "/index.html")
 
 
-        Dim result As Integer = MessageBox.Show("Run Local Wallet? - please wait until the local wallet has loaded before pressing the local wallet link", "Run Local Wallet?", MessageBoxButtons.YesNoCancel)
+        Dim result As Integer = DevExpress.XtraEditors.XtraMessageBox.Show(Me, "please wait until the local wallet has loaded before pressing the local wallet link", "Run local wallet?", MessageBoxButtons.YesNoCancel)
         If result = DialogResult.Cancel Then
 
         ElseIf result = DialogResult.No Then

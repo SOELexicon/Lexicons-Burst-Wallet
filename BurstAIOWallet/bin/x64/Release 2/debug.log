@@ -28707,3 +28707,37 @@
 [0417/035756:WARNING:audio_output_device.cc(328)] Output device authorization timed out
 [0417/180558:WARNING:audio_output_device.cc(328)] Output device authorization timed out
 [0417/202204:WARNING:backend_impl.cc(1802)] Destroying invalid entry.
+[0418/131320:WARNING:audio_output_device.cc(328)] Output device authorization timed out
+[0419/115507:INFO:CONSOLE(408)] "Uncaught Invalid input", source: https://wallet3.burstnation.com:8125/js/nrs.util.js (408)
+[0419/165545:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0419/185947:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0419/185950:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0419/185950:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0419/185952:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0419/185953:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0419/185954:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0419/185955:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0420/070549:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0420/101116:ERROR:backend_impl.cc(1033)] Critical error found -8
+[0420/101116:ERROR:entry_impl.cc(1039)] No file for c1030652
+[0420/101117:WARNING:storage_block-inl.h(131)] Failed data load.
+[0421/092019:INFO:CONSOLE(356)] "Uncaught ReferenceError: $ is not defined", source: https://wallet3.burstnation.com:8125/index.html (356)
+[0421/092019:INFO:CONSOLE(390)] "Uncaught ReferenceError: $ is not defined", source: https://wallet3.burstnation.com:8125/index.html (390)
+[0421/092122:INFO:CONSOLE(356)] "Uncaught ReferenceError: $ is not defined", source: https://wallet3.burstnation.com:8125/index.html (356)
+[0421/092122:INFO:CONSOLE(390)] "Uncaught ReferenceError: $ is not defined", source: https://wallet3.burstnation.com:8125/index.html (390)
+[0421/092532:INFO:CONSOLE(356)] "Uncaught ReferenceError: $ is not defined", source: https://wallet2.burstnation.com:8125/index.html (356)
+[0421/092532:INFO:CONSOLE(390)] "Uncaught ReferenceError: $ is not defined", source: https://wallet2.burstnation.com:8125/index.html (390)
+[0421/092654:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0421/092654:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0421/092657:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0421/092659:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0421/092659:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0421/211921:ERROR:backend_impl.cc(1033)] Critical error found -8
+[0421/211921:ERROR:entry_impl.cc(1039)] No file for c1030000
+[0421/211921:WARNING:storage_block-inl.h(131)] Failed data load.
+[0423/005550:ERROR:backend_impl.cc(1033)] Critical error found -8
+[0423/005550:ERROR:entry_impl.cc(1039)] No file for c103000a
+[0423/005550:WARNING:storage_block-inl.h(131)] Failed data load.
+[0423/005726:INFO:CONSOLE(8554)] "Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.", source: https://wallet3.burstnation.com:8125/js/3rdparty/jquery.js (8554)
+[0423/005726:INFO:CONSOLE(1430)] "Uncaught TypeError: elem.getAttribute is not a function", source: https://wallet3.burstnation.com:8125/js/3rdparty/jquery.js (1430)
+[0423/005726:INFO:CONSOLE(1430)] "Uncaught TypeError: elem.getAttribute is not a function", source: https://wallet3.burstnation.com:8125/js/3rdparty/jquery.js (1430)

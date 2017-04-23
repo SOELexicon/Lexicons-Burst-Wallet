@@ -3,6 +3,7 @@ Imports System.Text
 Imports System.IO
 Imports Newtonsoft.Json.Linq
 Imports System.Security.Cryptography
+Imports System.Web
 
 
 Public Class callAPI
@@ -61,6 +62,26 @@ Public Class callAPI
 
         Return sb.ToString()
     End Function
+
+    Public Shared Function satoshiToDecimal(sat As Int64)
+        If IsNothing(sat) Or IsNumeric(sat) = False Then
+            Return 0
+        Else
+            Return (sat / 100000000)
+        End If
+    End Function
+    Public Shared Function decimalToSatoshi(amount As Decimal)
+        Dim total As Int64 = 0
+        If IsNothing(amount) Or IsNumeric(amount) = False Then
+            total = 0
+        Else
+            total = (amount * 100000000)
+        End If
+        Return total
+    End Function
+
+
+
     Public Shared Function setRewardRecipient(url As String, passphrase As String, Recipient As String, feeNQT As Integer)
         'setRewardRecipient API Call.
         Dim serverurl As String = url
@@ -189,7 +210,7 @@ Public Class callAPI
         Dim serverurl As String = url
         Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=getAccountId")
         request.Method = "POST"
-        Dim postData As String = "&secretPhrase=" & secretPhrase
+        Dim postData As String = "&secretPhrase=" & WebUtility.UrlEncode(secretPhrase)
         Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
         request.ContentType = "application/x-www-form-urlencoded"
         request.ContentLength = byteArray.Length
@@ -252,7 +273,7 @@ Public Class callAPI
         Dim serverurl As String = url
         Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=placeAskOrder")
         request.Method = "POST"
-        Dim postData As String = "&asset=" & asset & "&quantityQNT=" & (quantityNQT) & "&priceNQT=" & (priceNQT * 100000000) & "&secretPhrase=" & secretPhrase & "&feeNQT=" & (feeNQT * 100000000) & "&deadline=1440"
+        Dim postData As String = "&asset=" & asset & "&quantityQNT=" & (quantityNQT) & "&priceNQT=" & decimalToSatoshi(priceNQT) & "&secretPhrase=" & secretPhrase & "&feeNQT=" & decimalToSatoshi(feeNQT) & "&deadline=1440"
 
         Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
         request.ContentType = "application/x-www-form-urlencoded"
@@ -274,7 +295,7 @@ Public Class callAPI
         Dim serverurl As String = url
         Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=placeBidOrder")
         request.Method = "POST"
-        Dim postData As String = "&asset=" & asset & "&quantityQNT=" & (quantityNQT) & "&priceNQT=" & (priceNQT * 100000000) & "&secretPhrase=" & secretPhrase & "&feeNQT=" & (feeNQT * 100000000) & "&deadline=1440"
+        Dim postData As String = "&asset=" & asset & "&quantityQNT=" & (quantityNQT) & "&priceNQT=" & decimalToSatoshi(priceNQT) & "&secretPhrase=" & secretPhrase & "&feeNQT=" & decimalToSatoshi(feeNQT) & "&deadline=1440"
 
         Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
         request.ContentType = "application/x-www-form-urlencoded"
@@ -291,7 +312,7 @@ Public Class callAPI
         response.Close()
         Return responseFromServer
     End Function
-  
+
     Public Shared Function getAssetTrades(url As String, asset As String)
         Dim serverurl As String = url
         Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=getTrades")
@@ -374,11 +395,14 @@ Public Class callAPI
         Return responseFromServer
     End Function
 
-    Public Shared Function getAccountTransactions(url As String, account As String, numberofconfirmations As String)
+    Public Shared Function getAccountTransactions(url As String, account As String, Optional timestamp As String = "0", Optional confirmations As String = "0")
+        Try
+
+     
         Dim serverurl As String = url
         Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=getAccountTransactions")
         request.Method = "POST"
-        Dim postData As String = "&account=" & account & "&numberOfConfirmations=" & numberofconfirmations
+        Dim postData As String = "&account=" & account & "&timestamp=" & timestamp
         Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
         request.ContentType = "application/x-www-form-urlencoded"
         request.ContentLength = byteArray.Length
@@ -392,7 +416,11 @@ Public Class callAPI
         reader.Close()
         dataStream.Close()
         response.Close()
-        Return responseFromServer
+            Return responseFromServer
+        Catch ex As Exception
+            Return ""
+
+        End Try
     End Function
     Public Shared Function getAssetAccounts(url As String, asset As String)
         Dim serverurl As String = url
@@ -414,11 +442,19 @@ Public Class callAPI
         response.Close()
         Return responseFromServer
     End Function
-    Public Shared Function sendMoney(url As String, recipient As String, amountNQT As String, secretPhrase As String, feeNQT As String)
+
+    Public Shared Function sendMoney(url As String, recipient As String, amountNQT As String, secretPhrase As String, feeNQT As String, Optional message As String = "", Optional encryptedMessage As Boolean = False)
         Dim serverurl As String = url
         Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=sendMoney")
         request.Method = "POST"
-        Dim postData As String = "&recipient=" & recipient & "&amountNQT=" & amountNQT & "&secretPhrase=" & secretPhrase & "&feeNQT=" & (feeNQT * 100000000) & "&deadline=1440"
+        Dim postData As String = "&recipient=" & recipient & "&amountNQT=" & decimalToSatoshi(amountNQT) & "&secretPhrase=" & WebUtility.UrlEncode(secretPhrase) & "&feeNQT=" & decimalToSatoshi(feeNQT) & "&deadline=1440"
+        If message = "" Then
+
+        ElseIf message <> "" And encryptedMessage = False Then
+            postData = postData & "&message=" & message & "&messageistext=true"
+        ElseIf message <> "" And encryptedMessage = True Then
+            postData = postData & "&messageToEncrypt=" & message & "&messageToEncryptIsText=true"
+        End If
         Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
         request.ContentType = "application/x-www-form-urlencoded"
         request.ContentLength = byteArray.Length
