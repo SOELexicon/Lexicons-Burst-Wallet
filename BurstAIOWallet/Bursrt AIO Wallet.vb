@@ -10,7 +10,7 @@ Imports Octokit
 
 
 Public Class BurstWallet
-    Dim currentVersion As String = "0.1.40-64Bit"
+    Dim currentVersion As String = "0.1.50-64Bit"
 
     Dim p() As Process
     Dim p2() As Process

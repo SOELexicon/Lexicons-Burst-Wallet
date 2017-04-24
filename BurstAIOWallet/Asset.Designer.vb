@@ -153,6 +153,7 @@ Partial Class Asset
         Me.GridColumn15 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ProgressBarControl1 = New DevExpress.XtraEditors.ProgressBarControl()
         Me.LayoutControlItem31 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.SplitterItem4 = New DevExpress.XtraLayout.SplitterItem()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -258,6 +259,7 @@ Partial Class Asset
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProgressBarControl1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitterItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridControl1
@@ -391,7 +393,7 @@ Partial Class Asset
         SideBySideBarSeriesView1.Color = System.Drawing.Color.Green
         Series1.View = SideBySideBarSeriesView1
         Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
-        Me.ChartControl2.Size = New System.Drawing.Size(1226, 264)
+        Me.ChartControl2.Size = New System.Drawing.Size(1226, 258)
         Me.ChartControl2.TabIndex = 17
         '
         'assetTransfersGC
@@ -1013,7 +1015,7 @@ Partial Class Asset
         '
         'LayoutControlGroup6
         '
-        Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem23, Me.LayoutControlItem24, Me.LayoutControlItem31})
+        Me.LayoutControlGroup6.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem23, Me.LayoutControlItem24, Me.LayoutControlItem31, Me.SplitterItem4})
         Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.OptionsItemText.TextToControlDistance = 4
@@ -1025,7 +1027,7 @@ Partial Class Asset
         Me.LayoutControlItem23.Control = Me.ChartControl2
         Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(1232, 270)
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(1232, 264)
         Me.LayoutControlItem23.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem23.TextVisible = False
         '
@@ -1448,6 +1450,13 @@ Partial Class Asset
         Me.LayoutControlItem31.Text = "Transactions Loaded"
         Me.LayoutControlItem31.TextSize = New System.Drawing.Size(118, 16)
         '
+        'SplitterItem4
+        '
+        Me.SplitterItem4.AllowHotTrack = True
+        Me.SplitterItem4.Location = New System.Drawing.Point(0, 264)
+        Me.SplitterItem4.Name = "SplitterItem4"
+        Me.SplitterItem4.Size = New System.Drawing.Size(1232, 6)
+        '
         'Asset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -1562,6 +1571,7 @@ Partial Class Asset
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProgressBarControl1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SplitterItem4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1688,4 +1698,5 @@ Partial Class Asset
     Friend WithEvents RepositoryItemDateEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
     Friend WithEvents ProgressBarControl1 As DevExpress.XtraEditors.ProgressBarControl
     Friend WithEvents LayoutControlItem31 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents SplitterItem4 As DevExpress.XtraLayout.SplitterItem
 End Class
