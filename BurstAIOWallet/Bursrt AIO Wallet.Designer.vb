@@ -48,8 +48,6 @@ Partial Class BurstWallet
         Me.NBIBlockExplorer = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarItem2 = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarGroup5 = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.NBIBcasino = New DevExpress.XtraNavBar.NavBarItem()
-        Me.NBIBurstNation = New DevExpress.XtraNavBar.NavBarItem()
         Me.NBILotto = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarSeparatorItem1 = New DevExpress.XtraNavBar.NavBarSeparatorItem()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
@@ -62,21 +60,21 @@ Partial Class BurstWallet
         Me.BarDockControl2 = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControl3 = New DevExpress.XtraBars.BarDockControl()
         Me.BarDockControl4 = New DevExpress.XtraBars.BarDockControl()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
-        Me.NavBarItem1 = New DevExpress.XtraNavBar.NavBarItem()
-        Me.ClipboardClearTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BarEditItem1 = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.ProgressBar = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemProgressBar1 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
         Me.ProgressCaption = New DevExpress.XtraBars.BarStaticItem()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.NavBarItem1 = New DevExpress.XtraNavBar.NavBarItem()
+        Me.ClipboardClearTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.TabFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabFormDefaultManager1
@@ -121,7 +119,7 @@ Partial Class BurstWallet
         Me.NavBarControl1.ActiveGroup = Me.NavBarGroup1
         Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
         Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.NavBarGroup1, Me.NavBarGroup2, Me.NavBarGroup3, Me.NavBarGroup4, Me.NavBarGroup5})
-        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.NavBarSeparatorItem1, Me.NBILocal, Me.NBINationFaucet, Me.NBIBNWallet1, Me.NBIBNWallet2, Me.NBIBNWallet3, Me.NBIBNUsa, Me.NBIPlotter, Me.NBIMine, Me.NBIAssetExplorer, Me.NBIPoD, Me.NBIBcasino, Me.NBINetExplore, Me.NBINixxdaWallet, Me.NBIFastestWallet, Me.NBIBurstNation, Me.NavBarItem2, Me.NBIBlockExplorer, Me.NBILotto})
+        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.NavBarSeparatorItem1, Me.NBILocal, Me.NBINationFaucet, Me.NBIBNWallet1, Me.NBIBNWallet2, Me.NBIBNWallet3, Me.NBIBNUsa, Me.NBIPlotter, Me.NBIMine, Me.NBIAssetExplorer, Me.NBIPoD, Me.NBINetExplore, Me.NBINixxdaWallet, Me.NBIFastestWallet, Me.NavBarItem2, Me.NBIBlockExplorer, Me.NBILotto})
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 182
@@ -145,25 +143,25 @@ Partial Class BurstWallet
         '
         'NBIBNWallet1
         '
-        Me.NBIBNWallet1.Caption = "BN Canada 1"
+        Me.NBIBNWallet1.Caption = "1"
         Me.NBIBNWallet1.Name = "NBIBNWallet1"
         Me.NBIBNWallet1.SmallImage = CType(resources.GetObject("NBIBNWallet1.SmallImage"), System.Drawing.Image)
         '
         'NBIBNWallet2
         '
-        Me.NBIBNWallet2.Caption = "BN Canada 2"
+        Me.NBIBNWallet2.Caption = "2"
         Me.NBIBNWallet2.Name = "NBIBNWallet2"
         Me.NBIBNWallet2.SmallImage = CType(resources.GetObject("NBIBNWallet2.SmallImage"), System.Drawing.Image)
         '
         'NBIBNWallet3
         '
-        Me.NBIBNWallet3.Caption = "BN France"
+        Me.NBIBNWallet3.Caption = "3"
         Me.NBIBNWallet3.Name = "NBIBNWallet3"
         Me.NBIBNWallet3.SmallImage = CType(resources.GetObject("NBIBNWallet3.SmallImage"), System.Drawing.Image)
         '
         'NBIBNUsa
         '
-        Me.NBIBNUsa.Caption = "BN USA"
+        Me.NBIBNUsa.Caption = "4"
         Me.NBIBNUsa.Name = "NBIBNUsa"
         Me.NBIBNUsa.SmallImage = CType(resources.GetObject("NBIBNUsa.SmallImage"), System.Drawing.Image)
         '
@@ -249,20 +247,9 @@ Partial Class BurstWallet
         'NavBarGroup5
         '
         Me.NavBarGroup5.Caption = "Games & Social"
-        Me.NavBarGroup5.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIBcasino), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBIBurstNation), New DevExpress.XtraNavBar.NavBarItemLink(Me.NBILotto)})
+        Me.NavBarGroup5.Expanded = True
+        Me.NavBarGroup5.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NBILotto)})
         Me.NavBarGroup5.Name = "NavBarGroup5"
-        '
-        'NBIBcasino
-        '
-        Me.NBIBcasino.Caption = "Burst Casino"
-        Me.NBIBcasino.Name = "NBIBcasino"
-        Me.NBIBcasino.SmallImage = CType(resources.GetObject("NBIBcasino.SmallImage"), System.Drawing.Image)
-        '
-        'NBIBurstNation
-        '
-        Me.NBIBurstNation.Caption = "Burst Nation Forum"
-        Me.NBIBurstNation.Name = "NBIBurstNation"
-        Me.NBIBurstNation.SmallImage = CType(resources.GetObject("NBIBurstNation.SmallImage"), System.Drawing.Image)
         '
         'NBILotto
         '
@@ -365,25 +352,6 @@ Partial Class BurstWallet
         Me.BarDockControl4.Location = New System.Drawing.Point(1257, 29)
         Me.BarDockControl4.Size = New System.Drawing.Size(0, 585)
         '
-        'XtraTabbedMdiManager1
-        '
-        Me.XtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders
-        Me.XtraTabbedMdiManager1.HeaderButtonsShowMode = DevExpress.XtraTab.TabButtonShowMode.Always
-        Me.XtraTabbedMdiManager1.MdiParent = Me
-        '
-        'NavBarItem1
-        '
-        Me.NavBarItem1.Caption = "Nation"
-        Me.NavBarItem1.Name = "NavBarItem1"
-        Me.NavBarItem1.SmallImage = CType(resources.GetObject("NavBarItem1.SmallImage"), System.Drawing.Image)
-        '
-        'ClipboardClearTimer
-        '
-        Me.ClipboardClearTimer.Interval = 20000
-        '
-        'Timer1
-        '
-        '
         'BarEditItem1
         '
         Me.BarEditItem1.Caption = "BarEditItem1"
@@ -413,6 +381,25 @@ Partial Class BurstWallet
         Me.ProgressCaption.Name = "ProgressCaption"
         Me.ProgressCaption.TextAlignment = System.Drawing.StringAlignment.Near
         '
+        'XtraTabbedMdiManager1
+        '
+        Me.XtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders
+        Me.XtraTabbedMdiManager1.HeaderButtonsShowMode = DevExpress.XtraTab.TabButtonShowMode.Always
+        Me.XtraTabbedMdiManager1.MdiParent = Me
+        '
+        'NavBarItem1
+        '
+        Me.NavBarItem1.Caption = "Nation"
+        Me.NavBarItem1.Name = "NavBarItem1"
+        Me.NavBarItem1.SmallImage = CType(resources.GetObject("NavBarItem1.SmallImage"), System.Drawing.Image)
+        '
+        'ClipboardClearTimer
+        '
+        Me.ClipboardClearTimer.Interval = 20000
+        '
+        'Timer1
+        '
+        '
         'BurstWallet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -435,9 +422,9 @@ Partial Class BurstWallet
         CType(Me.TabFormDefaultManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemProgressBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -477,12 +464,10 @@ Partial Class BurstWallet
     Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents NBIPoD As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NavBarGroup5 As DevExpress.XtraNavBar.NavBarGroup
-    Friend WithEvents NBIBcasino As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NBINetExplore As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NBINixxdaWallet As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NBIFastestWallet As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents ClipboardClearTimer As System.Windows.Forms.Timer
-    Friend WithEvents NBIBurstNation As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NavBarItem2 As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NBIBlockExplorer As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NBILotto As DevExpress.XtraNavBar.NavBarItem

@@ -14,6 +14,7 @@ Public Class Asset
     Public BurstRS As String
     Public BurstID As String
     Public BurstPublicKey As String
+    Public currentBlockHeight As Int64 = 0
 
     Dim xmlDataSet As System.Data.DataSet
     Dim assetinview, assetbuys, assetSells, assetsowned, transactionstable, transactionschart, assetaccountsdt As DataTable
@@ -89,7 +90,7 @@ Public Class Asset
         Dim json As JObject = JObject.Parse(callAPI.getAccount(ApiAddress, BurstID))
         Try
             TEName.Text = json.SelectToken("name").ToString()
-
+            Me.Text = "Wallet: " & TEName.Text
         Catch ex As Exception
             '   MsgBox("Error Setting Name", MsgBoxStyle.Information)
 
@@ -102,74 +103,87 @@ Public Class Asset
         End Try
         SplashScreenManager.Default.SetWaitFormCaption("Fetching Asset Balance's")
         Dim assettotalvalue As Decimal = 0
-
-        Try
-
        
-        If IsNothing(json.SelectToken("assetBalances")) = False Then
-            If json.SelectToken("assetBalances").Count > 0 Then
+        currentBlockHeight = checkCurrentBlockHeight()
+        lblHeight.Text = "Current Height: " + currentBlockHeight.ToString
+            Try
 
-                For i As Integer = 0 To json.SelectToken("assetBalances").Count - 1
-                    Try
 
-                        Dim balanceasset As Decimal = CType(json("assetBalances")(i)("balanceQNT"), Decimal)
-                        Dim asset As String = CType(json("assetBalances")(i)("asset"), String)
+                If IsNothing(json.SelectToken("assetBalances")) = False Then
+                    If json.SelectToken("assetBalances").Count > 0 Then
 
-                        Dim jsonAssetInfo As JObject = JObject.Parse(callAPI.getAsset(ApiAddress, asset))
-                        Dim assetname As String = jsonAssetInfo("name")
-                        Dim assetdecimals As Integer = jsonAssetInfo("decimals")
-                        Dim assettrade As JObject = JObject.Parse(callAPI.getBidOrders(ApiAddress, asset))
-                        Dim assetvalue As Decimal
-                        If assettrade("bidOrders").Count > 0 Then
-                            assetvalue = ((CType(assettrade("bidOrders")(0)("priceNQT"), Int64) / 100000000) * Math.Pow(10, assetdecimals)) * (balanceasset / Math.Pow(10, assetdecimals))
-                        Else
-                            assetvalue = 0
-                        End If
-                        assettotalvalue += assetvalue
-                        assetsowned.Rows.Add(asset, assetname, assetdecimals, balanceasset / Math.Pow(10, assetdecimals), assetvalue)
+                        For i As Integer = 0 To json.SelectToken("assetBalances").Count - 1
+                            Try
 
-                    Catch ex As Exception
-                    End Try
-                Next
-                assetsowned.AcceptChanges()
-            End If
-            End If
-        Catch ex As Exception
+                                Dim balanceasset As Decimal = CType(json("assetBalances")(i)("balanceQNT"), Decimal)
+                                Dim asset As String = CType(json("assetBalances")(i)("asset"), String)
 
-        End Try
-        TEAssetValue.Text = assettotalvalue
-        TEAccountValue.Text = CType(TEBalance.EditValue, Decimal) + CType(TEAssetValue.EditValue, Decimal)
+                                Dim jsonAssetInfo As JObject = JObject.Parse(callAPI.getAsset(ApiAddress, asset))
+                                Dim assetname As String = jsonAssetInfo("name")
+                                Dim assetdecimals As Integer = jsonAssetInfo("decimals")
+                                Dim assettrade As JObject = JObject.Parse(callAPI.getBidOrders(ApiAddress, asset))
+                                Dim assetvalue As Decimal
+                                If assettrade("bidOrders").Count > 0 Then
+                                    assetvalue = ((CType(assettrade("bidOrders")(0)("priceNQT"), Int64) / 100000000) * Math.Pow(10, assetdecimals)) * (balanceasset / Math.Pow(10, assetdecimals))
+                                Else
+                                    assetvalue = 0
+                                End If
+                                assettotalvalue += assetvalue
+                                assetsowned.Rows.Add(asset, assetname, assetdecimals, balanceasset / Math.Pow(10, assetdecimals), assetvalue)
 
-        assetTransfersGC.DataSource = assetsowned
-        ' assetTransfersGC.DataSource
-        transactionschart = New DataTable("Transactions")
-        With transactionschart
-            .Columns.Add(New DataColumn("DateTime", GetType(DateTime)))
-            .Columns.Add(New DataColumn("amountNQT", GetType(Decimal)))
-        End With
+                            Catch ex As Exception
+                            End Try
+                        Next
+                        assetsowned.AcceptChanges()
+                    End If
+                End If
+            Catch ex As Exception
 
-        ChartControl2.DataSource = transactionschart
-        GridControl4.DataSource = transactionstable
-        SplashScreenManager.Default.SetWaitFormCaption("Fetching Transaction's")
-        Try
-            BackgroundWorker1.RunWorkerAsync(sender)
+            End Try
+            TEAssetValue.Text = assettotalvalue
+            TEAccountValue.Text = CType(TEBalance.EditValue, Decimal) + CType(TEAssetValue.EditValue, Decimal)
 
-        Catch ex As Exception
+            assetTransfersGC.DataSource = assetsowned
+            ' assetTransfersGC.DataSource
+            transactionschart = New DataTable("Transactions")
+            With transactionschart
+                .Columns.Add(New DataColumn("DateTime", GetType(DateTime)))
+                .Columns.Add(New DataColumn("amountNQT", GetType(Decimal)))
+            End With
 
-        End Try
+            ChartControl2.DataSource = transactionschart
+            GridControl4.DataSource = transactionstable
+            SplashScreenManager.Default.SetWaitFormCaption("Fetching Transaction's")
+            Try
+                BackgroundWorker1.RunWorkerAsync(sender)
 
-    
-        DPLUEAssetID.Properties.DataSource = assetsowned
-        DPLUEAssetID.Properties.DisplayMember = "AssetID"
-        DPLUEAssetID.Properties.ValueMember = "AssetID"
-    
+            Catch ex As Exception
 
-        Try
-            DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm()
-        Catch ex As Exception
+            End Try
 
-        End Try
+
+            DPLUEAssetID.Properties.DataSource = assetsowned
+            DPLUEAssetID.Properties.DisplayMember = "AssetID"
+            DPLUEAssetID.Properties.ValueMember = "AssetID"
+
+
+            Try
+                DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm()
+            Catch ex As Exception
+
+            End Try
     End Sub
+    Private Function checkCurrentBlockHeight()
+        Dim height = 0
+        Try
+            Dim mininginfo As JObject = JObject.Parse(callAPI.getMiningInfo(ApiAddress))
+            height = Int64.Parse(mininginfo.SelectToken("height").ToString)
+        Catch ex As Exception
+            height = 0
+
+        End Try
+        Return height
+    End Function
     Private Sub GenerateTransactionDataSet()
 
 
@@ -809,75 +823,98 @@ Public Class Asset
 
     End Sub
     Dim oldtimestamp As Int64
+    Private Sub updateAccountInfo()
+        Try
+            Dim accountinfo As JObject = JObject.Parse(callAPI.getAccount(ApiAddress, BurstID))
+            TEBalance.Invoke(Sub()
+                                 TEBalance.Text = Decimal.Parse(callAPI.satoshiToDecimal(Int64.Parse(accountinfo.SelectToken("balanceNQT").ToString())))
+
+                             End Sub)
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
     Private Sub GetNewTransactions()
         Try
-            Dim jsonTransactions As JObject = JObject.Parse(callAPI.getAccountTransactions(ApiAddress, BurstID, besttimestamp.ToString, 0))
-            oldtimestamp = besttimestamp
+            Dim height As Int64 = checkCurrentBlockHeight()
+
+            If height > currentBlockHeight Then
+                currentBlockHeight = height
+                lblHeight.Invoke(Sub()
+                                     lblHeight.Text = "Current Height: " + currentBlockHeight.ToString
+                                 End Sub)
+
+                Dim jsonTransactions As JObject = JObject.Parse(callAPI.getAccountTransactions(ApiAddress, BurstID, besttimestamp.ToString, 0))
+                oldtimestamp = besttimestamp
 
 
-            If jsonTransactions("transactions").Count > 0 Then
-                Dim rowTransaction As DataRow
+                If jsonTransactions("transactions").Count > 0 Then
+                    Dim rowTransaction As DataRow
+                    updateAccountInfo()
 
-                For i As Integer = jsonTransactions("transactions").Count - 1 To 0 Step -1
-                    Dim timestamp As Int64 = CType(jsonTransactions("transactions")(i).SelectToken("timestamp"), Int64)
-                    If timestamp > oldtimestamp Then
+                    For i As Integer = jsonTransactions("transactions").Count - 1 To 0 Step -1
+                        Dim timestamp As Int64 = CType(jsonTransactions("transactions")(i).SelectToken("timestamp"), Int64)
+                        If timestamp > oldtimestamp Then
 
-                        With jsonTransactions("transactions")(i)
-                            Dim fee As Int16 = CType(.SelectToken("feeNQT"), Int64) / 100000000
-                            Dim senderrs As String = .SelectToken("senderRS")
-                            Dim sendreceive As String = "Receive"
-                            Dim recipientRS As String = .SelectToken("recipientRS")
-                            Dim ammount As Decimal = CType(.SelectToken("amountNQT"), Int64) / 100000000
-                            Dim transactiondatetim As DateTime = burstEpoch.AddSeconds(timestamp)
-                            Dim transaction As String = .SelectToken("transaction").ToString
-                            Dim alertcaption As String = ""
-                            Dim alerttext As String = ""
-                            Dim tranTypeList As List(Of String) = getTranType(.SelectToken("type").ToString, .SelectToken("subtype").ToString)
+                            With jsonTransactions("transactions")(i)
+                                Dim fee As Int16 = CType(.SelectToken("feeNQT"), Int64) / 100000000
+                                Dim senderrs As String = .SelectToken("senderRS")
+                                Dim sendreceive As String = "Receive"
+                                Dim recipientRS As String = .SelectToken("recipientRS")
+                                Dim ammount As Decimal = CType(.SelectToken("amountNQT"), Int64) / 100000000
+                                Dim transactiondatetim As DateTime = burstEpoch.AddSeconds(timestamp)
+                                Dim transaction As String = .SelectToken("transaction").ToString
+                                Dim alertcaption As String = ""
+                                Dim alerttext As String = ""
+                                Dim tranTypeList As List(Of String) = getTranType(.SelectToken("type").ToString, .SelectToken("subtype").ToString)
 
-                            If timestamp > besttimestamp Then
-                                besttimestamp = timestamp
-                            End If
-                            rowTransaction = transactionstable.NewRow
-                            rowTransaction("DateTime") = transactiondatetim
-                            rowTransaction("senderRS") = senderrs
-                            If senderrs = BurstRS Then
-                                rowTransaction("Sent/Receive") = "Sent"
-                                rowTransaction("amountNQT") = -ammount
-                            Else
-                                rowTransaction("Sent/Receive") = "Received"
-                                rowTransaction("amountNQT") = ammount
-                            End If
-                            rowTransaction("recipientRS") = recipientRS
-                            rowTransaction("feeNQT") = fee
-                            rowTransaction("timestamp") = timestamp
-                            rowTransaction("TransactionID") = transaction
-                            rowTransaction("Type") = tranTypeList(0)
-                            rowTransaction("SubType") = tranTypeList(1)
+                                If timestamp > besttimestamp Then
+                                    besttimestamp = timestamp
+                                End If
+                                rowTransaction = transactionstable.NewRow
+                                rowTransaction("DateTime") = transactiondatetim
+                                rowTransaction("senderRS") = senderrs
+                                If senderrs = BurstRS Then
+                                    rowTransaction("Sent/Receive") = "Sent"
+                                    rowTransaction("amountNQT") = -ammount
+                                Else
+                                    rowTransaction("Sent/Receive") = "Received"
+                                    rowTransaction("amountNQT") = ammount
+                                End If
+                                rowTransaction("recipientRS") = recipientRS
+                                rowTransaction("feeNQT") = fee
+                                rowTransaction("timestamp") = timestamp
+                                rowTransaction("TransactionID") = transaction
+                                rowTransaction("Type") = tranTypeList(0)
+                                rowTransaction("SubType") = tranTypeList(1)
 
-                            alertcaption = rowTransaction("Sent/Receive").ToString & " " & tranTypeList(1)
-                            alerttext = "From: " & senderrs & Environment.NewLine
-                            alerttext += "To: " & recipientRS & Environment.NewLine
-                            alerttext += "Burst: " & ammount.ToString
-                            Me.Invoke(Sub()
-                                          AlertTransaction.Show(Me, alertcaption, alerttext)
-                                          transactionstable.Rows.InsertAt(rowTransaction, 0)
-                                          transactionstable.AcceptChanges()
+                                alertcaption = rowTransaction("Sent/Receive").ToString & " " & tranTypeList(1)
+                                alerttext = "From: " & senderrs & Environment.NewLine
+                                alerttext += "To: " & recipientRS & Environment.NewLine
+                                alerttext += "Burst: " & ammount.ToString
+                                Me.Invoke(Sub()
+                                              AlertTransaction.Show(Me, alertcaption, alerttext)
+                                              transactionstable.Rows.InsertAt(rowTransaction, 0)
+                                              transactionstable.AcceptChanges()
 
-                                      End Sub)
-
-
-
+                                          End Sub)
 
 
-                        End With
 
-                    End If
 
-                Next
-            
+
+                            End With
+
+                        End If
+
+                    Next
+
+
+                End If
 
             End If
-
         Catch ex As Exception
 
         End Try

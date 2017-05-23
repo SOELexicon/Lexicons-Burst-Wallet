@@ -10,7 +10,7 @@ Imports Octokit
 
 
 Public Class BurstWallet
-    Dim currentVersion As String = "0.1.50-64Bit"
+    Dim currentVersion As String = "0.1.51-64Bit"
 
     Dim p() As Process
     Dim p2() As Process
@@ -48,11 +48,7 @@ Public Class BurstWallet
         SplashScreenManager.Default.SetWaitFormCaption("Jumping to Asset Explorer")
         OpenBrowserForm("http://asset.burstnation.com/", "Asset Explorer")
     End Sub
-    Private Sub casino_LinkClicked_1(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBIBcasino.LinkClicked
-        DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
-        SplashScreenManager.Default.SetWaitFormCaption("Jumping to Burst Casino")
-        OpenBrowserForm("https://burstcasino.com", "Burst Casino")
-    End Sub
+
 
     Private Sub NetExplore_LinkClicked_1(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBINetExplore.LinkClicked
         DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
@@ -67,10 +63,10 @@ Public Class BurstWallet
     End Sub
     Private Sub NBICanada1LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBIBNWallet1.LinkClicked
         DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
-        SplashScreenManager.Default.SetWaitFormCaption("Jumping to BN Canada 1")
-        OpenBrowserForm("https://wallet1.burstnation.com:8125/index.html", "BN Canada 1")
+        SplashScreenManager.Default.SetWaitFormCaption("Jumping wallet 1")
+        OpenBrowserForm("https://wallet.burst-team.us:8128/index.html", "wallet 1")
     End Sub
-
+        
     Private Sub NavBarItem2_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBILocal.LinkClicked
         Try
             CheckIfLocalRunning()
@@ -81,20 +77,21 @@ Public Class BurstWallet
 
     Private Sub NBIBNUsa_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBIBNUsa.LinkClicked
         DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
-        SplashScreenManager.Default.SetWaitFormCaption("Jumping to BN USA")
-        OpenBrowserForm("https://wallet4.burstnation.com:8125/index.html", "BN USA")
+        SplashScreenManager.Default.SetWaitFormCaption("Jumping to wallet")
+        OpenBrowserForm("https://wallet.burst-team.us:8125/index.html", "wallet")
     End Sub
 
     Private Sub NBIBNWallet3_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBIBNWallet3.LinkClicked
         DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
-        SplashScreenManager.Default.SetWaitFormCaption("Jumping to BN France")
-        OpenBrowserForm("https://wallet3.burstnation.com:8125/index.html", "BN France")
+        SplashScreenManager.Default.SetWaitFormCaption("Jumping to wallet")
+        OpenBrowserForm("https://wallet.burst-team.us:8126/index.html", "wallet")
     End Sub
 
     Private Sub NBIBNWallet2_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBIBNWallet2.LinkClicked
         DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
-        SplashScreenManager.Default.SetWaitFormCaption("Jumping to BN Canada 2")
-        OpenBrowserForm("https://wallet2.burstnation.com:8125/index.html", "BN Canada 2")
+        SplashScreenManager.Default.SetWaitFormCaption("Jumping to wallet")
+
+        OpenBrowserForm("https://wallet.burst-team.us:8127/index.html", "wallet")
     End Sub
 
     Private Sub NBINationFaucet_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBINationFaucet.LinkClicked
@@ -240,13 +237,7 @@ Public Class BurstWallet
         ClipboardClearTimer.Enabled = False
     End Sub
 
-    Private Sub NBIBurstNation_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NBIBurstNation.LinkClicked
 
-        DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(GetType(BurstWaitForm))
-        SplashScreenManager.Default.SetWaitFormCaption("Fleeing To Burst Nation Forum")
-        OpenBrowserForm("https://www.burstnation.com/", "Burst Nation Forums")
-
-    End Sub
     Public Sub showassetform(passphrase As String)
 
         Try

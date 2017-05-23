@@ -422,6 +422,26 @@ Public Class callAPI
 
         End Try
     End Function
+    Public Shared Function getMiningInfo(url As String)
+        Dim serverurl As String = url
+        Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=getMiningInfo")
+        request.Method = "POST"
+        Dim postData As String = ""
+        Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)
+        request.ContentType = "application/x-www-form-urlencoded"
+        request.ContentLength = byteArray.Length
+        Dim dataStream As Stream = request.GetRequestStream()
+        dataStream.Write(byteArray, 0, byteArray.Length)
+        dataStream.Close()
+        Dim response As WebResponse = request.GetResponse()
+        dataStream = response.GetResponseStream()
+        Dim reader As New StreamReader(dataStream)
+        Dim responseFromServer As String = reader.ReadToEnd()
+        reader.Close()
+        dataStream.Close()
+        response.Close()
+        Return responseFromServer
+    End Function
     Public Shared Function getAssetAccounts(url As String, asset As String)
         Dim serverurl As String = url
         Dim request As WebRequest = WebRequest.Create(serverurl & "burst?requestType=getAssetAccounts")
@@ -477,12 +497,15 @@ Public Class callAPI
         Dim BestWalletSpeed As Int64 = 9999999999999
         Dim BestWallet As String = ""
         Dim BestWalletHeight As Int64 = 0
-        Dim WalletsToTest(4) As String
-        WalletsToTest(0) = "https://wallet1.burstnation.com:8125/burst?requestType=getMiningInfo"
-        WalletsToTest(1) = "https://wallet2.burstnation.com:8125/burst?requestType=getMiningInfo"
-        WalletsToTest(2) = "https://wallet3.burstnation.com:8125/burst?requestType=getMiningInfo"
-        WalletsToTest(3) = "https://wallet4.burstnation.com:8125/burst?requestType=getMiningInfo"
-        WalletsToTest(4) = "https://wallet.nixxda.ninja:8125/burst?requestType=getMiningInfo"
+        Dim WalletsToTest(5) As String
+
+        WalletsToTest(0) = "https://127.0.0.1:8125/burst?requestType=getMiningInfo"
+        WalletsToTest(1) = "https://wallet.burst-team.us:8128/burst?requestType=getMiningInfo"
+        WalletsToTest(2) = "https://wallet.burst-team.us:8125/burst?requestType=getMiningInfo"
+        WalletsToTest(3) = "https://wallet.burst-team.us:8126/burst?requestType=getMiningInfo"
+        WalletsToTest(4) = "https://wallet.burst-team.us:8127/burst?requestType=getMiningInfo"
+        WalletsToTest(5) = "https://wallet4.burst-team.us:8128/burst?requestType=getMiningInfo"
+
         For Each i In WalletsToTest
             start_time = DateTime.Now()
             Dim request As HttpWebRequest
