@@ -8,7 +8,12 @@
 <pool>
   <address>burst.ninja</address>
 	<port>80</port>
-		<reward>BURST-7CPJ-BW8N-U4XF-CWW3U</reward>
+		<reward>BURST-7NTY-Y2BH-2QZM-HKEH8</reward>
+ </pool>
+<pool>
+  <address>poolofd32th.club</address>
+	<port>8124</port>
+		<reward>BURST-E925-FACX-C2X8-49772</reward>
  </pool>
 <pool>
   <address>burstpool.ddns.net</address>
