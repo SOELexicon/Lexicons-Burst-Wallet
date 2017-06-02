@@ -20,19 +20,20 @@ Partial Class Asset
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
-        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SideBySideBarSeriesView1 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
-        Dim XyDiagram2 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
-        Dim SecondaryAxisY1 As DevExpress.XtraCharts.SecondaryAxisY = New DevExpress.XtraCharts.SecondaryAxisY()
-        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim SideBySideBarSeriesView2 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
-        Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim CandleStickSeriesView1 As DevExpress.XtraCharts.CandleStickSeriesView = New DevExpress.XtraCharts.CandleStickSeriesView()
+        Dim XyDiagram3 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SideBySideBarSeriesView3 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
+        Dim XyDiagram4 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim SecondaryAxisY2 As DevExpress.XtraCharts.SecondaryAxisY = New DevExpress.XtraCharts.SecondaryAxisY()
+        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim SideBySideBarSeriesView4 As DevExpress.XtraCharts.SideBySideBarSeriesView = New DevExpress.XtraCharts.SideBySideBarSeriesView()
+        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim CandleStickSeriesView2 As DevExpress.XtraCharts.CandleStickSeriesView = New DevExpress.XtraCharts.CandleStickSeriesView()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Asset))
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
+        Me.lblHeight = New DevExpress.XtraEditors.LabelControl()
         Me.ProgressBarControl1 = New DevExpress.XtraEditors.ProgressBarControl()
         Me.MemoEdit1 = New DevExpress.XtraEditors.MemoEdit()
         Me.BtnSendPayments = New DevExpress.XtraEditors.SimpleButton()
@@ -114,6 +115,8 @@ Partial Class Asset
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.TabbedControlGroup1 = New DevExpress.XtraLayout.TabbedControlGroup()
+        Me.LayoutControlGroup9 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem32 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem23 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem24 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -154,9 +157,6 @@ Partial Class Asset
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.AlertTransaction = New DevExpress.XtraBars.Alerter.AlertControl(Me.components)
-        Me.LayoutControlGroup9 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.lblHeight = New DevExpress.XtraEditors.LabelControl()
-        Me.LayoutControlItem32 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -169,9 +169,9 @@ Partial Class Asset
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.assetTransfersGC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.assetTransfersGridview, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransferButtonEdit, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -214,18 +214,20 @@ Partial Class Asset
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SecondaryAxisY1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(CandleStickSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SecondaryAxisY2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(SideBySideBarSeriesView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(CandleStickSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtAddAsset.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TEDivamount.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem24, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -263,8 +265,6 @@ Partial Class Asset
         CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridControl1
@@ -322,6 +322,15 @@ Partial Class Asset
         Me.LayoutControl1.Size = New System.Drawing.Size(1288, 744)
         Me.LayoutControl1.TabIndex = 1
         Me.LayoutControl1.Text = "LayoutControl1"
+        '
+        'lblHeight
+        '
+        Me.lblHeight.Location = New System.Drawing.Point(31, 177)
+        Me.lblHeight.Name = "lblHeight"
+        Me.lblHeight.Size = New System.Drawing.Size(1226, 16)
+        Me.lblHeight.StyleController = Me.LayoutControl1
+        Me.lblHeight.TabIndex = 29
+        Me.lblHeight.Text = "LabelControl1"
         '
         'ProgressBarControl1
         '
@@ -483,18 +492,18 @@ Partial Class Asset
         '
         'ChartControl2
         '
-        XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
-        XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
-        Me.ChartControl2.Diagram = XyDiagram1
+        XyDiagram3.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram3.AxisY.VisibleInPanesSerializable = "-1"
+        Me.ChartControl2.Diagram = XyDiagram3
         Me.ChartControl2.Location = New System.Drawing.Point(31, 177)
         Me.ChartControl2.Name = "ChartControl2"
-        Series1.ArgumentDataMember = "DateTime"
-        Series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series1.Name = "Series 1"
-        Series1.ValueDataMembersSerializable = "amountNQT"
-        SideBySideBarSeriesView1.Color = System.Drawing.Color.Green
-        Series1.View = SideBySideBarSeriesView1
-        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Series4.ArgumentDataMember = "DateTime"
+        Series4.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series4.Name = "Series 1"
+        Series4.ValueDataMembersSerializable = "amountNQT"
+        SideBySideBarSeriesView3.Color = System.Drawing.Color.Green
+        Series4.View = SideBySideBarSeriesView3
+        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series4}
         Me.ChartControl2.Size = New System.Drawing.Size(1226, 258)
         Me.ChartControl2.TabIndex = 17
         '
@@ -914,9 +923,9 @@ Partial Class Asset
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 13.0!)
         Me.Label1.Location = New System.Drawing.Point(556, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 27)
+        Me.Label1.Size = New System.Drawing.Size(191, 27)
         Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Total Asset's Value"
+        Me.Label1.Text = "Total Assets Value"
         '
         'TEAssetValue
         '
@@ -1016,35 +1025,35 @@ Partial Class Asset
         '
         'ChartControl1
         '
-        XyDiagram2.AxisX.VisibleInPanesSerializable = "-1"
-        XyDiagram2.AxisY.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
-        XyDiagram2.AxisY.Title.Text = "Price"
-        XyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.[Default]
-        XyDiagram2.AxisY.VisibleInPanesSerializable = "-1"
-        SecondaryAxisY1.AxisID = 0
-        SecondaryAxisY1.Name = "Secondary AxisY 1"
-        SecondaryAxisY1.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
-        SecondaryAxisY1.Title.Text = "Volume"
-        SecondaryAxisY1.Title.Visibility = DevExpress.Utils.DefaultBoolean.[True]
-        SecondaryAxisY1.VisibleInPanesSerializable = "-1"
-        XyDiagram2.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SecondaryAxisY() {SecondaryAxisY1})
-        Me.ChartControl1.Diagram = XyDiagram2
+        XyDiagram4.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram4.AxisY.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
+        XyDiagram4.AxisY.Title.Text = "Price"
+        XyDiagram4.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.[Default]
+        XyDiagram4.AxisY.VisibleInPanesSerializable = "-1"
+        SecondaryAxisY2.AxisID = 0
+        SecondaryAxisY2.Name = "Secondary AxisY 1"
+        SecondaryAxisY2.Title.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Underline)
+        SecondaryAxisY2.Title.Text = "Volume"
+        SecondaryAxisY2.Title.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        SecondaryAxisY2.VisibleInPanesSerializable = "-1"
+        XyDiagram4.SecondaryAxesY.AddRange(New DevExpress.XtraCharts.SecondaryAxisY() {SecondaryAxisY2})
+        Me.ChartControl1.Diagram = XyDiagram4
         Me.ChartControl1.Location = New System.Drawing.Point(267, 273)
         Me.ChartControl1.Name = "ChartControl1"
         Me.ChartControl1.PaletteBaseColorNumber = 1
-        Series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series2.Name = "Volume"
-        Series2.ValueDataMembersSerializable = "Volume"
-        SideBySideBarSeriesView2.AxisYName = "Secondary AxisY 1"
-        SideBySideBarSeriesView2.Transparency = CType(100, Byte)
-        Series2.View = SideBySideBarSeriesView2
-        Series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
-        Series3.Name = "Price"
-        Series3.ValueDataMembersSerializable = "Low;High;Open;Close"
-        CandleStickSeriesView1.Color = System.Drawing.Color.Green
-        CandleStickSeriesView1.ReductionOptions.Color = System.Drawing.Color.DarkRed
-        Series3.View = CandleStickSeriesView1
-        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2, Series3}
+        Series5.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series5.Name = "Volume"
+        Series5.ValueDataMembersSerializable = "Volume"
+        SideBySideBarSeriesView4.AxisYName = "Secondary AxisY 1"
+        SideBySideBarSeriesView4.Transparency = CType(100, Byte)
+        Series5.View = SideBySideBarSeriesView4
+        Series6.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime
+        Series6.Name = "Price"
+        Series6.ValueDataMembersSerializable = "Low;High;Open;Close"
+        CandleStickSeriesView2.Color = System.Drawing.Color.Green
+        CandleStickSeriesView2.ReductionOptions.Color = System.Drawing.Color.DarkRed
+        Series6.View = CandleStickSeriesView2
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series5, Series6}
         Me.ChartControl1.Size = New System.Drawing.Size(990, 183)
         Me.ChartControl1.TabIndex = 6
         '
@@ -1110,10 +1119,28 @@ Partial Class Asset
         '
         Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 119)
         Me.TabbedControlGroup1.Name = "TabbedControlGroup1"
-        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup9
-        Me.TabbedControlGroup1.SelectedTabPageIndex = 3
+        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup2
+        Me.TabbedControlGroup1.SelectedTabPageIndex = 1
         Me.TabbedControlGroup1.Size = New System.Drawing.Size(1262, 599)
         Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup6, Me.LayoutControlGroup2, Me.LayoutControlGroup3, Me.LayoutControlGroup9})
+        '
+        'LayoutControlGroup9
+        '
+        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem32})
+        Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
+        Me.LayoutControlGroup9.OptionsItemText.TextToControlDistance = 4
+        Me.LayoutControlGroup9.Size = New System.Drawing.Size(1232, 542)
+        Me.LayoutControlGroup9.Text = "Blocks"
+        '
+        'LayoutControlItem32
+        '
+        Me.LayoutControlItem32.Control = Me.lblHeight
+        Me.LayoutControlItem32.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem32.Name = "LayoutControlItem32"
+        Me.LayoutControlItem32.Size = New System.Drawing.Size(1232, 542)
+        Me.LayoutControlItem32.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem32.TextVisible = False
         '
         'LayoutControlGroup6
         '
@@ -1463,33 +1490,6 @@ Partial Class Asset
         Me.AlertTransaction.AppearanceCaption.Image = CType(resources.GetObject("AlertTransaction.AppearanceCaption.Image"), System.Drawing.Image)
         Me.AlertTransaction.AppearanceCaption.Options.UseImage = True
         '
-        'LayoutControlGroup9
-        '
-        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem32})
-        Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
-        Me.LayoutControlGroup9.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup9.Size = New System.Drawing.Size(1232, 542)
-        Me.LayoutControlGroup9.Text = "Blocks"
-        '
-        'lblHeight
-        '
-        Me.lblHeight.Location = New System.Drawing.Point(31, 177)
-        Me.lblHeight.Name = "lblHeight"
-        Me.lblHeight.Size = New System.Drawing.Size(78, 16)
-        Me.lblHeight.StyleController = Me.LayoutControl1
-        Me.lblHeight.TabIndex = 29
-        Me.lblHeight.Text = "LabelControl1"
-        '
-        'LayoutControlItem32
-        '
-        Me.LayoutControlItem32.Control = Me.lblHeight
-        Me.LayoutControlItem32.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem32.Name = "LayoutControlItem32"
-        Me.LayoutControlItem32.Size = New System.Drawing.Size(1232, 542)
-        Me.LayoutControlItem32.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem32.TextVisible = False
-        '
         'Asset
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -1509,9 +1509,9 @@ Partial Class Asset
         CType(Me.GridView6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SideBySideBarSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.assetTransfersGC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.assetTransfersGridview, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1555,12 +1555,12 @@ Partial Class Asset
         CType(Me.TEAccountRS.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SecondaryAxisY1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(XyDiagram2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(SideBySideBarSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(CandleStickSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SecondaryAxisY2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(SideBySideBarSeriesView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(CandleStickSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtAddAsset.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TEDivamount.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1568,6 +1568,8 @@ Partial Class Asset
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem24, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1605,8 +1607,6 @@ Partial Class Asset
         CType(Me.LayoutControlItem30, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

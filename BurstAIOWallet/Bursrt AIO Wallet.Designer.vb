@@ -247,7 +247,6 @@ Partial Class BurstWallet
         'NavBarGroup5
         '
         Me.NavBarGroup5.Caption = "Games & Social"
-        Me.NavBarGroup5.Expanded = True
         Me.NavBarGroup5.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NBILotto)})
         Me.NavBarGroup5.Name = "NavBarGroup5"
         '

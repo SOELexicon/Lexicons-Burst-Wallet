@@ -30,4 +30,9 @@
     <assetName>BURSity</assetName>
     <assetQTY>4000000</assetQTY>
   </asset>
+  <asset>
+    <assetID>15836104858047390466</assetID>
+    <assetName>MTMGaming</assetName>
+    <assetQTY>5000000</assetQTY>
+  </asset>
 </NewDataSet>

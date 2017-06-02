@@ -33,7 +33,7 @@ Public Class ChooseMiner
             '  LookUpEdit1.DataBindings.Add(LookUpEdit1.Text, xmlDataSet.Tables("pools"), "address")
             '  LookUpEdit1.DataBindings.Add(LookUpEdit1.EditValue, xmlDataSet.Tables("pools"), "port")
             ' LookUpEdit1.Text = stringReader
-            walletaddress = callAPI.getFastestWallet()
+
         Catch ex As Exception
             MsgBox(ex)
         Finally
@@ -184,9 +184,9 @@ Public Class ChooseMiner
 
     Private Sub BtnMine_Click(sender As Object, e As EventArgs) Handles BtnMine.Click
         If HasAvxSupport() = True Then
-            StartMiner("miner-v1.160705_AVX.exe")
+            StartMiner("miner-v1.170601_AVX.exe")
         Else
-            StartMiner("miner-v1.160705.exe")
+            StartMiner("miner-v1.170601.exe")
         End If
     End Sub
 
@@ -195,8 +195,16 @@ Public Class ChooseMiner
     End Sub
 
     Private Sub SimpleButton1_Click_1(sender As Object, e As EventArgs) Handles btnSubmit.Click
-
+        walletaddress = callAPI.getFastestWallet()
         MsgBox(JObject.Parse(callAPI.setRewardRecipient(walletaddress.Replace("/burst?requestType=getMiningInfo", "/"), txtPassPhrase.Text, TxtRecipient.Text, EdtFee.EditValue)).ToString())
         txtPassPhrase.Text = ""
+    End Sub
+
+    Private Sub btnMineAVX2_click(sender As Object, e As EventArgs) Handles btnMineAVX2.Click
+        If HasAvxSupport() = True Then
+            StartMiner("miner-v1.170601_AVX2.exe")
+        Else
+            DevExpress.XtraEditors.XtraMessageBox.Show(Me, "CPU Not Supported", "Error", DevExpress.Utils.DefaultBoolean.Default)
+        End If
     End Sub
 End Class

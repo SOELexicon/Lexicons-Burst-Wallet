@@ -48,6 +48,8 @@ Partial Class ChooseMiner
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.btnMineAVX2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.EdtFee.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,10 +71,12 @@ Partial Class ChooseMiner
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LayoutControl1
         '
+        Me.LayoutControl1.Controls.Add(Me.btnMineAVX2)
         Me.LayoutControl1.Controls.Add(Me.btnSubmit)
         Me.LayoutControl1.Controls.Add(Me.EdtFee)
         Me.LayoutControl1.Controls.Add(Me.TxtRecipient)
@@ -91,13 +95,13 @@ Partial Class ChooseMiner
         Me.LayoutControl1.Name = "LayoutControl1"
         Me.LayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(1340, 555, 312, 402)
         Me.LayoutControl1.Root = Me.LayoutControlGroup1
-        Me.LayoutControl1.Size = New System.Drawing.Size(705, 273)
+        Me.LayoutControl1.Size = New System.Drawing.Size(705, 321)
         Me.LayoutControl1.TabIndex = 0
         Me.LayoutControl1.Text = "LayoutControl1"
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(31, 213)
+        Me.btnSubmit.Location = New System.Drawing.Point(31, 244)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(643, 27)
         Me.btnSubmit.StyleController = Me.LayoutControl1
@@ -107,7 +111,7 @@ Partial Class ChooseMiner
         'EdtFee
         '
         Me.EdtFee.EditValue = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.EdtFee.Location = New System.Drawing.Point(355, 185)
+        Me.EdtFee.Location = New System.Drawing.Point(355, 216)
         Me.EdtFee.Name = "EdtFee"
         Me.EdtFee.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.EdtFee.Properties.IsFloatValue = False
@@ -120,7 +124,7 @@ Partial Class ChooseMiner
         '
         'TxtRecipient
         '
-        Me.TxtRecipient.Location = New System.Drawing.Point(31, 137)
+        Me.TxtRecipient.Location = New System.Drawing.Point(31, 168)
         Me.TxtRecipient.Name = "TxtRecipient"
         Me.TxtRecipient.Size = New System.Drawing.Size(643, 22)
         Me.TxtRecipient.StyleController = Me.LayoutControl1
@@ -128,7 +132,7 @@ Partial Class ChooseMiner
         '
         'txtPassPhrase
         '
-        Me.txtPassPhrase.Location = New System.Drawing.Point(31, 185)
+        Me.txtPassPhrase.Location = New System.Drawing.Point(31, 216)
         Me.txtPassPhrase.Name = "txtPassPhrase"
         Me.txtPassPhrase.Size = New System.Drawing.Size(318, 22)
         Me.txtPassPhrase.StyleController = Me.LayoutControl1
@@ -273,11 +277,11 @@ Partial Class ChooseMiner
         '
         Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3, Me.LayoutControlItem2, Me.LayoutControlGroup2})
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3, Me.LayoutControlItem2, Me.LayoutControlGroup2, Me.LayoutControlItem13})
         Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup1.Name = "Root"
         Me.LayoutControlGroup1.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(705, 273)
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(705, 321)
         Me.LayoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem3
@@ -301,10 +305,10 @@ Partial Class ChooseMiner
         'LayoutControlGroup2
         '
         Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem6, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem12})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 61)
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 94)
         Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
         Me.LayoutControlGroup2.OptionsItemText.TextToControlDistance = 4
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(679, 186)
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(679, 201)
         Me.LayoutControlGroup2.Text = "Reward Recipient Change"
         '
         'LayoutControlItem6
@@ -342,15 +346,33 @@ Partial Class ChooseMiner
         Me.LayoutControlItem12.Control = Me.btnSubmit
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(649, 35)
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(649, 52)
         Me.LayoutControlItem12.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem12.TextVisible = False
+        '
+        'btnMineAVX2
+        '
+        Me.btnMineAVX2.Location = New System.Drawing.Point(16, 77)
+        Me.btnMineAVX2.Name = "btnMineAVX2"
+        Me.btnMineAVX2.Size = New System.Drawing.Size(673, 27)
+        Me.btnMineAVX2.StyleController = Me.LayoutControl1
+        Me.btnMineAVX2.TabIndex = 18
+        Me.btnMineAVX2.Text = "Mine AVX2"
+        '
+        'LayoutControlItem13
+        '
+        Me.LayoutControlItem13.Control = Me.btnMineAVX2
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 61)
+        Me.LayoutControlItem13.Name = "LayoutControlItem13"
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(679, 33)
+        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem13.TextVisible = False
         '
         'ChooseMiner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(705, 273)
+        Me.ClientSize = New System.Drawing.Size(705, 321)
         Me.Controls.Add(Me.LayoutControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(723, 318)
@@ -377,6 +399,7 @@ Partial Class ChooseMiner
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -408,4 +431,6 @@ Partial Class ChooseMiner
     Friend WithEvents LayoutControlItem10 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem11 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem12 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents btnMineAVX2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlItem13 As DevExpress.XtraLayout.LayoutControlItem
 End Class

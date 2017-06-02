@@ -29492,3 +29492,271 @@
 [0523/121359:INFO:CONSOLE(8623)] "Mixed Content: The page at 'https://wallet.burst-team.us:8125/index.html' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://wallet.burst-team.us:8125/burst'. This request has been blocked; the content must be served over HTTPS.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
 [0523/121359:INFO:CONSOLE(8623)] "XMLHttpRequest cannot load http://wallet.burst-team.us:8125/burst. Failed to start loading.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
 [0523/122858:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0524/232933:ERROR:backend_impl.cc(1033)] Critical error found -8
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232935:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:WARNING:storage_block-inl.h(131)] Failed data load.
+[0524/232936:ERROR:entry_impl.cc(964)] Failed to save user data
+[0524/232943:INFO:CONSOLE(8623)] "Mixed Content: The page at 'https://wallet.burst-team.us:8125/index.html' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://wallet.burst-team.us:8125/burst'. This request has been blocked; the content must be served over HTTPS.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
+[0524/232943:INFO:CONSOLE(8623)] "XMLHttpRequest cannot load http://wallet.burst-team.us:8125/burst. Failed to start loading.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
+[0527/030452:INFO:CONSOLE(8623)] "Mixed Content: The page at 'https://wallet.burst-team.us:8125/index.html' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://wallet.burst-team.us:8125/burst'. This request has been blocked; the content must be served over HTTPS.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
+[0527/030452:INFO:CONSOLE(8623)] "XMLHttpRequest cannot load http://wallet.burst-team.us:8125/burst. Failed to start loading.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
+[0601/093005:INFO:CONSOLE(8623)] "Mixed Content: The page at 'https://wallet.burst-team.us:8126/index.html' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://wallet.burst-team.us:8126/burst'. This request has been blocked; the content must be served over HTTPS.", source: https://wallet.burst-team.us:8126/js/3rdparty/jquery.js (8623)
+[0601/093005:INFO:CONSOLE(8623)] "XMLHttpRequest cannot load http://wallet.burst-team.us:8126/burst. Failed to start loading.", source: https://wallet.burst-team.us:8126/js/3rdparty/jquery.js (8623)
+[0601/150722:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/172204:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184024:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184028:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184028:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184030:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184033:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184033:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184035:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184038:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184038:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184040:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184042:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184042:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184043:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184043:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184045:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184047:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184047:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184048:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184048:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184050:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184052:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184052:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184053:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184053:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184055:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184057:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184057:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184058:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184058:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184101:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184102:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184102:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184103:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184103:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184106:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184107:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184107:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184108:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184108:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184111:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184112:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184112:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184113:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184113:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184116:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184117:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184117:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184118:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184118:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184121:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184122:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184122:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184123:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184123:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184126:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184127:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184127:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184128:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184128:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184131:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184132:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184132:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184133:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184133:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184136:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184137:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184137:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184138:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184138:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184141:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184142:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184142:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184143:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184143:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184146:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184147:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184147:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184148:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184148:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184151:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184152:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184152:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184153:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184153:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184156:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184157:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184157:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184158:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184158:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184201:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184202:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184202:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184203:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184203:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184206:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184207:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184207:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184208:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184208:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184211:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184212:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184212:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184213:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184213:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184216:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184217:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184217:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184218:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184218:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184221:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184222:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184222:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184223:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184223:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184226:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184227:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184227:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184228:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184228:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184231:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184232:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184232:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184233:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184233:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184236:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184237:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184237:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184238:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184238:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184241:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184242:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184242:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184243:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184243:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184246:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184247:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184247:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184248:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184248:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184251:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184252:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184252:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184253:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184253:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184256:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184257:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184257:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184258:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184258:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/184301:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/232949:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/232949:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/232954:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/232954:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/232955:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/232959:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/232959:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/233000:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/233001:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0601/233002:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/070125:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/070130:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085307:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085307:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085308:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085312:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085313:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085314:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085317:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085319:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085319:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085319:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085320:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085320:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085322:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085324:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/085324:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173158:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173203:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173208:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173209:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173213:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173214:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173218:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173219:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173222:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173223:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173224:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173227:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/173228:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/184535:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/184540:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/184545:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/184550:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213209:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213212:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213212:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213214:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213217:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213217:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213219:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213221:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213222:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213222:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213224:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213226:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213226:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213227:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213227:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213443:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213443:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213445:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213448:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/213448:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/214518:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/214519:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/214519:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/214521:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/214521:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/214523:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/214524:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0602/233737:INFO:CONSOLE(8623)] "Mixed Content: The page at 'https://wallet.burst-team.us:8125/index.html' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://wallet.burst-team.us:8125/burst'. This request has been blocked; the content must be served over HTTPS.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
+[0602/233737:INFO:CONSOLE(8623)] "XMLHttpRequest cannot load http://wallet.burst-team.us:8125/burst. Failed to start loading.", source: https://wallet.burst-team.us:8125/js/3rdparty/jquery.js (8623)
+[0602/234934:INFO:CONSOLE(8623)] "Mixed Content: The page at 'https://wallet.burst-team.us:8128/index.html' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://wallet.burst-team.us:8128/burst'. This request has been blocked; the content must be served over HTTPS.", source: https://wallet.burst-team.us:8128/js/3rdparty/jquery.js (8623)
+[0602/234934:INFO:CONSOLE(8623)] "XMLHttpRequest cannot load http://wallet.burst-team.us:8128/burst. Failed to start loading.", source: https://wallet.burst-team.us:8128/js/3rdparty/jquery.js (8623)
